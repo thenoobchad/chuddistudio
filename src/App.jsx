@@ -32,9 +32,9 @@ const Block = ({ className, ...rest }) => {
 
 const HeaderBlock = () => {
   return <Block className="col-span-12 row-span-2 md:col-span-6">
-    <img src="../src/assets/xpfp.jpg" alt="avatar" className="mb-4 size-18 rounded-full " />
+    <img src="https://pbs.twimg.com/profile_images/1932146465129844736/TAEJBusb_400x400.jpg" className="mb-4 size-18 rounded-full justify-self-center-safe" />
     <h1 className="mb-12 text-4xl font-medium leading-tight ">Hi, I'm Henry.{" "} <span className="text-zinc-400">I build cool websites.</span></h1>
-    <a href="#" className="flex items-center gap-1 text-red-300 hover:underline">
+    <a href="#" className="flex items-center gap-1  text-red-300 hover:underline ">
       Contact me <FiArrowRight />
     </a>
   </Block>
