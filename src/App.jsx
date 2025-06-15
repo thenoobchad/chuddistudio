@@ -1,35 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import {motion} from "framer-motion"
+import {twMerge} from "tailwind-merge"
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="min-h-screen bg-zinc-900 px-4 py-12 text-zinc-50">
+      <div className="mx-auto max-w-4xl grid grid-cols-12 gap-4 grid-flow-dense">
+        <Block>
+         
+        </Block>
+        <Block />
+        <Block />
+        <Block />
+        <Block />
+        <Block />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
   )
 }
 
-export default App
+
+
+const Block = ({ className, ...rest }) => {
+  return <motion.div
+   
+    className={twMerge("col-span-4 rounded-sm border border-zinc-700 bg-zinc-800 p-6", className)}
+  {...rest}
+  />
+}
+
+const HeaderBlock = () => {
+  return <Block className="col-span-12 row-span-"></Block>
+}
