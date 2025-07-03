@@ -1,7 +1,7 @@
 import {motion} from "framer-motion"
 import { FiArrowRight, FiHeart, FiMail, FiMapPin } from "react-icons/fi"
 import { SiGithub, SiTiktok, SiYoutube, } from "react-icons/si"
-import { TiHeart, TiSocialTwitter } from "react-icons/ti"
+import { TiHeart, TiSocialTwitter, TiSocialDribbble, TiSocialFacebook } from "react-icons/ti"
 
 
 
@@ -21,13 +21,6 @@ export default function App() {
 
         <a href="/" className="h-full flex items-center justify-center border-l-2 px-6 text-xl font-bold tracking-tighter ">chudd <span className="text-orange-600">i</span> studio</a>
 
-        {/* <nav className="w-full flex justify-end pr-4 gap-4">
-          <Button><SiGithub size={25} /></Button>
-          
-          <Button><TiSocialTwitter size={25} /></Button>
-          
-          <Button><SiTiktok  size={25}/></Button>
-        </nav> */}
       </header>
     <div className="p-2 flex flex-col min-h-screen items-center justify-center">
         <div className="max-w-152 md:max-w-202 gap-4 flex flex-col">
@@ -36,10 +29,37 @@ export default function App() {
           <p className="text-md text-gray-600">We are a creative studio helping innovative startups and business stand out in a world of short attention sapn with strategic web designs and branding</p>
 
           <Button className="text-base font-semibold w-fit bg-orange-400">Let's chat!</Button>
-</div>
 
-   
+          <p></p>
+
+
+
+         
       </div>
+      </div>
+      <footer className="w-full bg-black px-2 pt-10 text-gray-50 flex flex-col">
+        <div className="flex flex-col md:flex-row w-full justify-between">
+          <div className="flex flex-col gap-4 w-full md:max-w-md">
+            <h4 className="uppercase font-extrabold text-xl tracking-tight">Chidi Elueme</h4>
+            <p className="text-[14px]">A Fullstack focused web developer with expertise in building websites and web applications that drive the need market and enhances business and products.</p>
+        </div>
+          <div className="flex gap-4 justify-center py-4">
+           
+              <SiGithub className="w-5 h-6" />
+            
+            <TiSocialTwitter className="w-6 h-6" />
+            <TiSocialDribbble className="w-6 h-6" />
+            
+            <TiSocialFacebook className="w-6 h-6"/>
+          </div>
+        </div>
+        <div className="h-[1px] mb-4 mt-2 w-full bg-gray-900"/>
+        <div className="w-full flex justify-center pb-6">
+
+          
+          <p className="text-[13px]  tracking-wide">@ Copyright 2025. Made by <span className="font-semibold">Chidi Elueme <span className="text-orange-400 border-b"> clutchdeveloper</span></span></p>
+        </div>
+</footer>
       </div>
   )
 }
