@@ -9,17 +9,17 @@ import { TiHeart, TiSocialTwitter } from "react-icons/ti"
 export default function App() {
   return (
     <div>
-      <header className="h-18 border-b-4 flex items-center justify-between shadow-">
+      <header className="h-18 border-b-4 flex items-center justify-between bg-white">
 
         <nav className="w-full flex justify-between pr-4 gap-4">
-          <ul className="flex items-center gap-4 text-gray-800 font-semibold pl-8">
-          <li>About us</li>
-            <li>Services</li>
-            <li>Case studies</li>
+          <ul className="flex items-center gap-4 text-gray-800 font-semibold pl-4">
+          <li className="whitespace-nowrap tracking-tight">About us</li>
+            <li className="whitespace-nowrap tracking-tight">Services</li>
+            <li className="whitespace-nowrap tracking-tight">Case studies</li>
             </ul>
         </nav>
 
-        <a href="/" className="h-full flex items-center justify-center border-l-2 px-8 text-xl font-bold tracking-tighter ">chudd <span className="text-orange-600">i</span> studio</a>
+        <a href="/" className="h-full flex items-center justify-center border-l-2 px-6 text-xl font-bold tracking-tighter ">chudd <span className="text-orange-600">i</span> studio</a>
 
         {/* <nav className="w-full flex justify-end pr-4 gap-4">
           <Button><SiGithub size={25} /></Button>
