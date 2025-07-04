@@ -53,7 +53,7 @@ export default function App() {
         
         {/* PROJECTS BEGINS  */}
         <div className="w-full flex flex-col items-center gap-2">
-          <h4 className="text-xl font-extrabold uppercase">Projects</h4>
+          <h4 className="text-xl font-extrabold uppercase ">Projects</h4>
           <div className="h-1 w-15 bg-black" />
           <p className="max-w-152 md:max-w-202">Some business and startup websites we ahve created over the years with each project containing it's own case study. each tailored to meet our clients needs. Kindly explore our catalog.</p>
         </div>
@@ -68,7 +68,20 @@ export default function App() {
          {/* PROJECTS ENDS  */}
       </section>
       {/* SERVICES ENDS HERE */}
-
+      <section className="w-full h-[80vh] bg-orange-400 flex  flex-col items-center justify-center">
+        <form action="" className="flex flex-col gap-4 bg-white min-w-[400px] border-2 rounded-sm px-4 py-10">
+          <div className="flex flex-col gap-2">
+            <label htmlFor="email" className="tracking-tight ">Email</label>
+            <input type="text" placeholder="e.g. alkanrain@mail.com" className="h-12 focus:outline-none border-2 rounded-sm p-2" />
+          </div>
+           <div className="flex flex-col gap-2">
+            <label htmlFor="message">Message</label>
+            <textarea type="text" rows={4} placeholder="sending text..." className="focus:outline-none border-2 rounded-sm p-2 " />
+          </div>
+          <Button>
+            <span className="text-center w-full font-semibold">Send a Mail...</span></Button>
+        </form>
+</section>
       <footer className="w-full bg-black px-2 pt-10 text-gray-50 flex flex-col">
         <div className="flex flex-col md:flex-row w-full justify-between">
           <div className="flex flex-col gap-4 w-full md:max-w-md">
