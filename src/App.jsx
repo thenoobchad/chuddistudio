@@ -9,6 +9,8 @@ import { AiFillDatabase } from "react-icons/ai"
 //components
 import {ExperienceCard} from "./components/experience-card"
 import { experience } from "./constants"
+import { MdLocationOn } from "react-icons/md"
+import { IoMail } from "react-icons/io5"
 
 
 
@@ -158,16 +160,69 @@ export default function App() {
      </div>
   </section>
 
-    {/*  */}
+      {/*  */}
+      
+
+    <section id="skills" className="p-2 py-6 flex flex-col min-h-screen items-center justify-center">
+    <div className="max-w-202 md:max-w-302  mx-auto w-full">
+          
+          <h4 className="text-md underline  font-bold my-8">get in touch</h4>
+          <h4 className="text-3xl capitalize font-semibold text-center pb-4">Share Your Ideas, Lets Make it Happen</h4>
+        </div>
+        <div className="w-full container  mx-auto flex flex-col items-center gap-2 justify-center">
+
+          <p className="text-center">I will very much love to see your project become a real worlf application. Got an interesting project? <br /> Let's discus how we can work together.</p>
+          
+          <div>
+            <ul>
+              <li className="flex gap-4"><MdLocationOn className="w-5 h-6" /> Port Harcourt, Nigeria</li>
+              
+               <li className="flex gap-4"><IoMail className="w-5 h-6" /> chidielueme@gmail.com</li>             
+            </ul>
+          </div>
+
+          <div className="max-w-[340px] mt-8 flex flex-col gap-2">
+            <h4>Send a message</h4>
+            <p>Fill out the form below i'll get back to you within 24 hours</p>
+            <form className="w-full ">
+              <div className="flex flex-col gap-2 my-4">
+                <label htmlFor="full name">Full Name</label>
+                <input type="text" placeholder="e.g.John Doe" className="hover:outline-0 outline-0 h-10 text-sm bg-zinc-50 px-4 border-b border-zinc-400"/>
+              </div>
+
+              <div className="flex flex-col gap-2 my-4">
+                <label htmlFor="full name">Email</label>
+                <input type="text" placeholder="e.g.johndoe@mail.com" className="hover:outline-0 outline-0 h-10 text-sm bg-zinc-50 px-4 border-b border-zinc-400"/>
+              </div>
+
+              <div className="flex flex-col gap-2 my-4">
+                <label htmlFor="full name">Subject</label>
+                <input type="text" placeholder="project collaboration" className="hover:outline-0 outline-0 h-10 text-sm bg-zinc-50 px-4 border-b border-zinc-400"/>
+              </div>
+
+              <div className="flex flex-col gap-2 my-4">
+                <label htmlFor="full name">Message</label>
+                <textarea cols={1} rows={3} type="text" placeholder="tell me about your project" className="hover:outline-0 outline-0 h-10 text-sm bg-zinc-50 px-4 border-b border-zinc-400"/>
+              </div>
+              <button className="w-full border h-10">Send message</button>
+            </form>
+          </div>
+    </div>
+   </section>
    
     <footer className="w-full bg-black px-2 pt-10 text-gray-50 flex flex-col">
-      <div className="flex flex-col md:flex-row w-full justify-between">
-        <div className="flex flex-col gap-4 w-full md:max-w-md">
-          <h4 className="uppercase font-bold text-[18px] tracking-tight">Chidi Elueme</h4>
-          <p className="text-[14px]">A Fullstack focused web developer with expertise in building websites and web applications that drive the need market and enhances business and products.</p>
-      </div>
-        <div className="flex gap-4 justify-center py-4">
-         <a href="https://github.com/thenoobchad">
+     
+    
+      <div className="w-full flex-col flex justify-center pb-6">
+
+        
+          <p className="text-[13px]  tracking-wide text-center">@ Copyright 2025. <span >Henry Osita Elueme  
+
+          </span>
+          </p>
+          <div className="flex gap-4 justify-center py-4">
+         
+          <a href="https://github.com/thenoobchad">
             <SiGithub className="w-5 h-6" />
           </a>
           
@@ -177,12 +232,6 @@ export default function App() {
           
           <TiSocialFacebook className="w-6 h-6"/>
         </div>
-      </div>
-      <div className="h-[1px] mb-4 mt-2 w-full bg-gray-900"/>
-      <div className="w-full flex justify-center pb-6">
-
-        
-        <p className="text-[13px]  tracking-wide">@ Copyright 2025. Made by <span className="font-semibold">Chidi Elueme <span className="text-orange-400 border-b"> clutchdeveloper</span></span></p>
       </div>
 </footer>
     </main>
