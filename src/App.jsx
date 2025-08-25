@@ -1,8 +1,13 @@
 import {motion} from "framer-motion"
-import { div } from "motion/react-client"
+import { div, span } from "motion/react-client"
 import { FiArrowRight, FiHeart, FiMail, FiMapPin } from "react-icons/fi"
 import { SiGithub, SiTiktok, SiYoutube, } from "react-icons/si"
 import { TiHeart, TiSocialTwitter, TiSocialDribbble, TiSocialFacebook } from "react-icons/ti"
+import { FaCode, FaDatabase, FaTools } from "react-icons/fa"
+import { AiFillDatabase } from "react-icons/ai"
+
+//components
+import {ExperienceCard} from "./components/experience-card"
 
 
 
@@ -30,7 +35,7 @@ export default function App() {
     {/* HERO STARTS HERE */}
 
   
-  <section className=" p-2 py-6 flex flex-col min-h-screen items-center justify-center">
+    <section id="hero" className=" p-2 py-6 flex flex-col min-h-screen items-center justify-center">
         <div className=" max-w-152 md:max-w-202 gap-4 flex flex-col">
 
           <div className="flex items-center">
@@ -42,14 +47,14 @@ export default function App() {
           <h4 className="text-4xl md:text-6xl font-extrabold border-l-4  text-gray-950 pl-4">Hi, i'm Henry <br />  Elueme Ositadimma</h4>
           
         <h3>Full Stack Web Developer & Software Engineer . . . </h3>
-        <p className="text-md bg-gray-200 text-gray-900 border-r-4 font-semibold pr-4 p-2">I am a dedicated full stack developer with over 4 years of experience, passionately crafting innovative, scalable, and user-centric web applications that drive impact, leveraging experties in React, Nodejs, Nextjs, Server actions and cutting -edge cloud technologies to deliver seamless digital solutions.</p>
+        <p className="text-md bg-gray-200 text-gray-900 border-r-4 font-semibold pr-4 p-2">I am a dedicated full stack developer with over 4 years of experience, passionately crafting innovative, scalable, and user-centric web applications that drive impact, leveraging experties in React, Nodejs, Nextjs, Server actions and cutting-edge cloud technologies to deliver seamless digital solutions.</p>
 
           <div className="flex gap-4">
 
             <Button className="mt-4   text-base font-semibold w-fit">Download Resume</Button>
             
 
-        <Button className="mt-4 text-base font-semibold w-fit bg-orange-400">Let's chat!</Button>
+        <Button className="mt-4 text-base font-semibold w-fit bg-amber-800">Let's chat!</Button>
           </div>
           <div>Socials: Email|LinkedIn|Whatsapp</div>
     </div>
@@ -59,59 +64,96 @@ export default function App() {
     {/* HERO ENDS HERE */}
 
     {/* ABOUT US BEGINS HERE */}
-    <section className="p-2 py-6 flex flex-col min-h-screen items-center justify-center">
-        <div className="container mx-auto w-full">
-          <h4 className="text-md underline font-mono font-bold">about me</h4>
+    <section id="about" className="p-2 py-6 flex flex-col min-h-screen items-center justify-center">
+        <div className="max-w-152 md:max-w-202  mx-auto w-full">
+          
+          <h4 className="text-md underline  font-bold my-8">about me</h4>
+          <h4 className="text-3xl capitalize font-semibold text-center pb-4">A web developer passionate about <br/>bringing ideas to life</h4>
           <p>I am a Full stack developer specializing in frontend development with a strong understnding of backend architecture, I build dynamic and scalable applications. </p>
           <p>I am a Full stack developer specializing in frontend development with a strong understnding of backend architecture, I build dynamic and scalable applications. </p>
         
       </div>
         
     </section>
-    {/* ABOUT US ENDS HERE */}
+      {/* ABOUT US ENDS HERE */}
+      
 
-    
-    {/* SERVICES BEGINS HERE */}
 
-    <section className="p-2 py-6 flex flex-col min-h-screen items-center justify-center">
+    <section id="skills" className="p-2 py-6 flex flex-col min-h-screen items-center justify-center">
+      <div className="max-w-202 md:max-w-302  mx-auto w-full">
 
       
-{/* PROJECTS BEGINS  */}
-<div className="w-full container  mx-auto flex flex-col items-center gap-2">
 
-  <div className="h-1 w-15 bg-black" />
-  <p className="max-w-152 md:max-w-202">Some business and startup websites we ahve created over the years with each project containing it's own case study. each tailored to meet our clients needs. Kindly explore our catalog.</p>
+      <h4 className="text-md underline  font-bold my-8">skills & technologies</h4>
+      <h4 className="text-3xl capitalize font-semibold text-center pb-4">Software technical experties</h4>
+      <p className="text-center">Tools and technologies i frequently work with in actualizing ideas and bringing applications to life.</p>
+      </div>
+
+  <div className="py-6 grid grid-cols-1 sm:grid-cols-2  gap-4">
+          {tecSkills.map((data) => (
+            <div className={`max-w-[400px] sm:w-[300px] gap-2 shadow-[4px_4px_0px_0px] shadow-${data.color}-500 border border-zinc-200 rounded-sm p-3 flex flex-wrap`}>
+              <h4 className="w-full flex gap-2 items-center text-sm animate-bounce"><span className="bg-amber-50 p-1 rounded-full text">{data.icon}</span>{data.title}</h4>
+              {data.skills.map((skill) => (
+                <span className="bg-gray-100 text-xs lg:text-sm  px-2 py-[2px] rounded-full" key={skill}>
+                {skill}
+                 </span>
+              ))
+                
+              }
+           
+        </div>
+    ))}
+         
+            
+   
+          </div>
+       
+
+ {/* PROJECTS ENDS  */}
+  </section>
+
+    
+    {/* PROJECTS BEGINS HERE */}
+
+ <section id="skills" className="p-2 py-6 flex flex-col min-h-screen items-center justify-center">
+  <div className="max-w-202 md:max-w-302  mx-auto w-full">
+          
+          <h4 className="text-md underline  font-bold my-8">featured projects</h4>
+          <h4 className="text-3xl capitalize font-semibold text-center pb-4">Software Projects built</h4>
+       
+  <div className="w-full container  mx-auto flex flex-col items-center gap-2">
+
+  <p>Some of my recent projects showcasing my skill and experience, as well personal projects</p>
 </div>
 
-<div className="py-6">
-
+     <div className="mx-2 sm:mx-0 py-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      {projects.map((data) => (
+      <SkillCard data={data} />
+      ))}
+          </div>
  
 </div>
 
  {/* PROJECTS ENDS  */}
-      </section>
+</section>
       
+<section id="skills" className="p-2 py-6 flex flex-col min-h-screen items-center justify-center">
+  <div className="max-w-202 md:max-w-302  mx-auto w-full">
+          
+          <h4 className="text-md underline  font-bold my-8">work experience</h4>
+          <h4 className="text-3xl capitalize font-semibold text-center pb-4">My Professional Software Journey</h4>
+       
+      <div className="w-full container  mx-auto flex flex-col items-center gap-2">
 
-    <section className="p-2 py-6 flex flex-col min-h-screen items-center justify-center">
-
-      
-      {/* PROJECTS BEGINS  */}
-      <div className="w-full flex flex-col items-center gap-2">
-        <h4 className="text-xl font-extrabold uppercase ">Projects</h4>
-        <div className="h-1 w-15 bg-black" />
-        <p className="max-w-152 md:max-w-202">Some business and startup websites we ahve created over the years with each project containing it's own case study. each tailored to meet our clients needs. Kindly explore our catalog.</p>
+      <p>Some of the companies and clients i have ahd the pleasure of working and growing with.</p>
       </div>
+          <div>
 
-      <div className="py-6">
+            <ExperienceCard/>
+          </div>
 
-        <div className="border-2 max-w-[400px] sm:w-[300px] h-[350px] shadow-[4px_4px_0px_0px] rounded-sm p-2">
-          <span>View site</span>
-        </div>
-      </div>
-
-       {/* PROJECTS ENDS  */}
-    </section>
-    {/* SERVICES ENDS HERE */}
+     </div>
+  </section>
 
     {/*  */}
    
@@ -149,7 +191,103 @@ export default function App() {
 
 const Button = ({ children, className }) => {
   return(
-    <button type="submit" className={`h-12 shadow-[4px_4px_0px_0px] cursor-pointer border-2 px-4 text-md tracking-wide flex items-center  rounded-sm hover:shadow-[0px_0px_0] transition-all ${className}`}>
+    <button type="submit" className={`h-12 shadow-[4px_4px_0px_0px] shadow-black cursor-pointer border-2 px-4 text-md tracking-wide flex items-center  rounded-sm hover:shadow-[0px_0px_0] transition-all ${className}`}>
   {children}
 </button>)
 }
+
+const projects = [
+  {
+    id: 1,
+    title: "Health Tracker",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic accusantium inventore minus. Dolor impedit aspernatur odit sit voluptas itaque illo",
+    skills: ["Nextjs", "Server actions", "MySQL", "Rest APIs", "Nodejs", "Tailwindcss", "Typescript"],
+    link:"http://www.github.com"
+  },
+
+  {
+    id: 2,
+    title: "JB Properties and Housing",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic accusantium inventore minus. Dolor impedit aspernatur odit sit voluptas itaque illo",
+    skills: ["Nextjs", "MongoDB", "MySQL", "Rest APIs", "Nodejs", "Tailwindcss", "Typescript"],
+    link:"http://www.github.com"
+  },
+
+  {
+    id: 3,
+    title: "Herbspro Technology",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic accusantium inventore minus. Dolor impedit aspernatur odit sit voluptas itaque illo",
+    skills: ["Nextjs", "MySQL", "Rest APIs", "Nodejs", "Tailwindcss", "Typescript"],
+    link:"http://www.github.com"
+  }
+  ,
+  {
+    id: 4,
+    title: "Herbspro Technology",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic accusantium inventore minus. Dolor impedit aspernatur odit sit voluptas itaque illo",
+    skills: ["Nextjs", "MySQL", "Rest APIs", "Nodejs", "Tailwindcss", "Typescript"],
+    link:"http://www.github.com"
+  }
+
+
+]
+
+const tecSkills = [
+  {
+    id: 1,
+    title: "Frontend",
+    skills: ["HTML/CSS/JS", "ReactJs", "Typescript", "Tailwindcss", "GSAP"],
+    color: "green",
+    icon:<FaCode />
+  },
+
+  {
+    id: 2,
+    title: "Backend",
+    skills: ["Nextjs", "MongoDB", "MySQL", "Rest APIs", "Nodejs", "Python"],
+    color: "red",
+    icon:<FaDatabase />
+  },
+
+  {
+    id: 3,
+    title: "Database",
+    skills: ["PostgreSQL", "MySQL", "MongoDB", "Firbase", "Supabase"],
+    color: "blue",
+    icon:<AiFillDatabase />
+  }
+  ,
+  {
+    id: 4,
+    title: "Software Tools",
+    skills: ["Git", "Vercel", "Postman", "AWS", "GitHub","vite"],
+    color: "purple",
+    icon:<FaTools/>
+  }
+
+
+]
+
+
+const SkillCard = ({data}) => {
+  return (
+    <div key={data.id}>
+    <div></div>
+    
+    <div>
+        <h4>{data.title}</h4>
+          <h2>{data.title}</h2>
+          <p>{data.desc}</p>
+             <div className="flex flex-wrap gap-2">
+             {data.skills.map((skill) => (
+             <span className="bg-gray-100 text-xs lg:text-sm  px-2 py-1 rounded-full" key={skill}>
+              {skill}
+               </span>
+        ))}
+       
+      </div>
+    </div>
+   </div>
+  )
+}
+
