@@ -1,3 +1,43 @@
+export const experience = [
+  {
+    id: 1,
+    title: "Frontend Developer",
+    company: "Digispert Technologies",
+    date: "2025 - Present",
+    location: "Remote",
+    tasks: [
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit, eius",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, nulla",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, totam. Veniam", "fuga sit quasi deleniti assumenda incidunt asperiores, earum provident accusamus ut", "libero officiis voluptas minima reprehenderit iusto cum maiores?"
+    ]
+  },
+  {
+    id: 2,
+    title: "Backend Developer",
+    company: "Tous Properties",
+    date: "2024 - 2025",
+    location: "Remote",
+    tasks: [
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit, eius",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, nulla",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, totam. Veniam", "fuga sit quasi deleniti assumenda incidunt asperiores, earum provident accusamus ut", "libero officiis voluptas minima reprehenderit iusto cum maiores?"
+    ]
+  },
+  {
+    id: 3,
+    title: "Fullstack Developer",
+    company: "Scout Technologies",
+    date: "2023 - 2024",
+    location: "Remote",
+    tasks: [
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit, eius",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, nulla",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, totam. Veniam", "fuga sit quasi deleniti assumenda incidunt asperiores, earum provident accusamus ut", "libero officiis voluptas minima reprehenderit iusto cum maiores?"
+    ]
+  }
+]
+
+
 const navLinks = [
     {
       name: "Work",

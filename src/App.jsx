@@ -8,6 +8,7 @@ import { AiFillDatabase } from "react-icons/ai"
 
 //components
 import {ExperienceCard} from "./components/experience-card"
+import { experience } from "./constants"
 
 
 
@@ -147,9 +148,11 @@ export default function App() {
 
       <p>Some of the companies and clients i have ahd the pleasure of working and growing with.</p>
       </div>
-          <div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            {experience.map((exp) => (
+              <ExperienceCard exp={exp} key={exp.id} />
+            ))}
 
-            <ExperienceCard/>
           </div>
 
      </div>
