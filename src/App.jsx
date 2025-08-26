@@ -1,8 +1,4 @@
-import {motion} from "framer-motion"
-import { div, span } from "motion/react-client"
-import { FiArrowRight, FiHeart, FiMail, FiMapPin } from "react-icons/fi"
-import { SiGithub, SiTiktok, SiYoutube, } from "react-icons/si"
-import { TiHeart, TiSocialTwitter, TiSocialDribbble, TiSocialFacebook } from "react-icons/ti"
+
 import { FaCode, FaDatabase, FaTools } from "react-icons/fa"
 import { AiFillDatabase } from "react-icons/ai"
 
@@ -11,30 +7,19 @@ import {ExperienceCard} from "./components/experience-card"
 import { experience } from "./constants"
 import { MdLocationOn } from "react-icons/md"
 import { IoMail } from "react-icons/io5"
+import { Footer } from "./components/footer"
+import { Header } from "./components/header"
 
 
 
 
 export default function App() {
   return (
-    
+           
     <main className="w-full">
-    <header className="h-18 border-b-4 flex items-center justify-between bg-white">
-
-      <nav className="w-full flex justify-between pr-4 gap-4">
-        <ul className="flex items-center gap-4 text-gray-800 font-semibold pl-4">
-        <a href="#" className="whitespace-nowrap tracking-tight">About us</a>
-          <a href="#" className="whitespace-nowrap tracking-tight">Services</a>
-          <a href="#" className="whitespace-nowrap tracking-tight">Case studies</a>
-          </ul>
-      </nav>
-
-      <a href="/" className=" h-full flex items-center justify-center border-l-2 px-2 text-xl font-bold tracking-tighter ">chud <span className="text-orange-600">i</span> studio</a>
-     
-
-    </header>
-    {/* HEADER ENDS HERE */}
-    
+  <Header />
+      
+   
     {/* HERO STARTS HERE */}
 
   
@@ -210,30 +195,8 @@ export default function App() {
     </div>
    </section>
    
-    <footer className="w-full bg-black px-2 pt-10 text-gray-50 flex flex-col">
-     
     
-      <div className="w-full flex-col flex justify-center pb-6">
-
-        
-          <p className="text-[13px]  tracking-wide text-center font-mono">&copy;Copyright 2025. <span >Henry Ositadimma Elueme. All rights reserved.
-
-          </span>
-          </p>
-          <div className="flex gap-4 justify-center py-4">
-         
-          <a href="https://github.com/thenoobchad">
-            <SiGithub className="w-5 h-6" />
-          </a>
-          
-          
-          <TiSocialTwitter className="w-6 h-6" />
-          <TiSocialDribbble className="w-6 h-6" />
-          
-          <TiSocialFacebook className="w-6 h-6"/>
-        </div>
-      </div>
-</footer>
+      <Footer />
     </main>
   )
 }
