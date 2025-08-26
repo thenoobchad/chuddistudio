@@ -216,7 +216,7 @@ export default function App() {
       <div className="w-full flex-col flex justify-center pb-6">
 
         
-          <p className="text-[13px]  tracking-wide text-center">@ Copyright 2025. <span >Henry Osita Elueme  
+          <p className="text-[13px]  tracking-wide text-center font-mono">&copy;Copyright 2025. <span >Henry Ositadimma Elueme. All rights reserved.
 
           </span>
           </p>
