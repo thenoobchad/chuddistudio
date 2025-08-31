@@ -11,7 +11,7 @@ import { MdLocationOn } from 'react-icons/md'
 export const ExperienceCard = ({exp}) => {
   return (
     <div className='text-sm  p-2 font-semibold'>
-      <div className='flex flex-col p-4 bg-purple-400 rounded-sm'>
+      <div className='flex flex-col p-4 bg-purple-950 rounded-sm'>
         <div className='flex justify-between'>{exp.title} <span className='flex gap-1 items-center' ><FaCalendar/>{exp.date}</span></div>
         <div className='flex justify-between'>{exp.company}<span className='flex gap-1 items-center'><MdLocationOn/>{exp.location}</span></div>
       </div>

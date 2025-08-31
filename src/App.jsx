@@ -113,7 +113,7 @@ export default function App() {
   <div className="py-6 grid grid-cols-1 sm:grid-cols-2  gap-4 ">
           {tecSkills.map((data) => (
             <div className={`max-w-[400px] sm:w-[300px] gap-2 bg-white rounded-sm p-3 flex flex-wrap`}>
-              <h4 className="w-full flex gap-2 items-center text-sm text-black"><span className="bg-purple-500 p-1 rounded-full text-white">{data.icon}</span>{data.title}</h4>
+              <h4 className="w-full flex gap-2 items-center text-sm text-black"><span className="bg-purple-950 p-1 rounded-full text-white">{data.icon}</span>{data.title}</h4>
               {data.skills.map((skill) => (
                 <span className="text-black text-xs lg:text-sm  px-2 py-[2px] rounded-full bg-purple-100" key={skill}>
                 {skill}
@@ -130,12 +130,11 @@ export default function App() {
           </div>
        
 
- {/* PROJECTS ENDS  */}
+
   </section>
 
     
-    {/* PROJECTS BEGINS HERE */}
-
+   {/* FEATURED PROJECT SESSION */}
  <section id="skills" className="p-2 py-6 flex flex-col min-h-screen items-center justify-center">
   <div className="max-w-202 md:max-w-302  mx-auto w-full">
           <SectionHeading section="featured projects" heading="Software Projects built" subheading="Some of my recent projects showcasing my skill and experience, as well personal projects"/>
@@ -221,7 +220,7 @@ export default function App() {
                 <label htmlFor="full name">Message</label>
                 <textarea cols={1} rows={3} type="text" placeholder="tell me about your project" className="hover:outline-0 outline-0 h-10 text-sm bg-zinc-50 px-4 border-b border-zinc-400"/>
               </div>
-              <button className="w-full border h-10">Send message</button>
+               <Button className="mt-4 text-base font-semibold w-full text-white text-center bg-purple-950">Send Message</Button>
             </form>
           </div>
     </div>
@@ -287,7 +286,7 @@ const SkillCard = ({data}) => {
     <div key={data.id}>
     <div></div>
     
-    <div>
+    <div className="bg-white/10 p-4 rounded-sm">
         <h4 className="text-lg font-bold">{data.title}</h4>
           <h2 className="text-sm text-gray-400 py-2">{data.title}</h2>
           <p className="text-sm text-justify mb-2">{data.desc}</p>
