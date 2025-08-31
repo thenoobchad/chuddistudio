@@ -75,9 +75,9 @@ export default function App() {
 
           <div className="flex gap-4">
 
-            <a href="/public/henry_cv.pdf" download>
+            <a href="/files/henry_cv.pdf" download>
               <Button className="mt-4 text-base font-semibold w-fit text-white bg-purple-950">Download Resume</Button>
-              </a>
+             </a>
             
 
         <Button className="mt-4 text-base font-semibold w-fit text-white bg-purple-950">Let's chat!</Button>
