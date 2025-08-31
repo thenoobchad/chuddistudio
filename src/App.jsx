@@ -75,7 +75,9 @@ export default function App() {
 
           <div className="flex gap-4">
 
-           <Button className="mt-4 text-base font-semibold w-fit text-white bg-purple-950">Download Resume</Button>
+            <a href="/public/henry_cv.pdf" download>
+              <Button className="mt-4 text-base font-semibold w-fit text-white bg-purple-950">Download Resume</Button>
+              </a>
             
 
         <Button className="mt-4 text-base font-semibold w-fit text-white bg-purple-950">Let's chat!</Button>
@@ -176,8 +178,8 @@ export default function App() {
      </div>
   </section>
 
-      {/*  */}
-      
+     
+   {/* GET IN TOUCH SECTION */}
 
     <section id="skills" className="p-2 py-6 flex flex-col min-h-screen items-center justify-center">
         <div className="max-w-202 md:max-w-302  mx-auto w-full">
