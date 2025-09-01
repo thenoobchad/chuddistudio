@@ -76,7 +76,7 @@ export default function App() {
           <div className="flex gap-4">
 
             <a href="/files/henry_cv.pdf" download>
-              <Button className="mt-4 text-base font-semibold w-fit text-white bg-purple-950">Download Resume</Button>
+              <Button className="mt-4 text-base font-semibold w-fit text-white bg-gray-950">Download Resume</Button>
              </a>
             
 
@@ -90,8 +90,9 @@ export default function App() {
     {/* HERO ENDS HERE */}
 
     {/* ABOUT ME */}
-    <section id="about" className="text-white bg-purple-950 p-2 py-6 flex flex-col min-h-screen items-center justify-center">
-        <div className="max-w-152 md:max-w-202  mx-auto w-full pb-10">
+    <section id="about" className="text-white bg-gray-950 p-2 py-6 flex flex-col min-h-screen items-center justify-center">
+         <div className="max-w-202 md:max-w-302  mx-auto w-full pb-10">
+
            <h4 className="text-md underline  font-bold my-8">about me</h4>
           <h4 className="text-3xl capitalize font-semibold text-center pb-4">A web developer passionate about <br/>bringing ideas to life</h4>
           <div className="flex flex-col md:flex-row gap-4">
