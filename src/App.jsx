@@ -63,8 +63,8 @@ export default function App() {
     {/* HERO STARTS HERE */}
 
   
-      <section id="hero" className=" p-2 py-6 flex flex-col h-screen relative items-center justify-center bg-cover bg-no-repeat bg-center" style={{ backgroundImage: "url('/files/image-2.png')" }}>
-        <div className="absolute inset-0 bg-black/90 z-10"/>
+      <section id="hero" className=" p-2 py-6 flex flex-col h-screen relative items-center justify-center bg-cover bg-no-repeat bg-center" style={{ backgroundImage: "url('/images/bgcode.jpg')" }}>
+        <div className="absolute inset-0 bg-zinc-950/95 z-10"/>
         <div className="relative z-20 max-w-152 md:max-w-202 gap-4 flex flex-col">
 
           

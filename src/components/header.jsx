@@ -17,7 +17,7 @@ export const Header = () => {
   })
 
   return (
-    <header className={`${active ? "fixed w-full   top-0  p-2 transition-all delay-200 !h-18":""} h-14 flex items-center justify-between `}>
+    <header className={`${active ? "fixed w-full   top-0  p-2 transition-all delay-200 !h-18":""} h-14 flex items-center justify-between z-30`}>
 
       <nav className={`${active && "bg-zinc-950"} w-full flex justify-between  gap-4 relative h-full`}>
         <a>HEO</a>
