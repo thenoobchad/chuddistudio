@@ -91,15 +91,15 @@ export default function App() {
 
     {/* ABOUT ME */}
     <section id="about" className="text-white bg-purple-950 p-2 py-6 flex flex-col min-h-screen items-center justify-center">
-        <div className="max-w-152 md:max-w-202  mx-auto w-full">
+        <div className="max-w-152 md:max-w-202  mx-auto w-full pb-10">
            <h4 className="text-md underline  font-bold my-8">about me</h4>
           <h4 className="text-3xl capitalize font-semibold text-center pb-4">A web developer passionate about <br/>bringing ideas to life</h4>
           <div className="flex flex-col md:flex-row gap-4">
-             <div className="w-1/2">
+             <div className="md:w-1/2 w-full">
               
-              <img src="/files/hero.png" className="h-full w-full bg-cover bg-no-repeat"/>
+              <img src="/files/hero.png" className="h-full w-full bg-cover bg-no-repeat animate-pulse"/>
             </div>
-            <div className="w-1/2 flex justify-center items-center">
+            <div className="md:w-1/2 w-full flex justify-center items-center">
          
               <p className="text-justify">I am a Full stack developer specializing in frontend development with a strong understnding of backend architecture, I build dynamic and scalable applications. </p>
             </div>
