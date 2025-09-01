@@ -41,6 +41,10 @@ section {
   .flex-col-center {
     @apply flex flex-col justify-center items-center;
   }
+
+  .primary {
+    @apply bg-gray-950
+  }
 }
 
 
