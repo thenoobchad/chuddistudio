@@ -97,7 +97,7 @@ export default function App() {
           <div className="flex flex-col md:flex-row gap-4">
              <div className="md:w-1/2 w-full">
               
-              <img src="/files/hero.png" className="h-full w-full bg-cover bg-no-repeat animate-pulse"/>
+              <img src="/images/hero.png" className="h-full w-full bg-cover bg-no-repeat animate-pulse"/>
             </div>
             <div className="md:w-1/2 w-full flex justify-center items-center">
          
