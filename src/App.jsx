@@ -76,8 +76,8 @@ export default function App() {
     <>
       {showVideo ? (
         <div className="fixed top-0 left-0 w-[100%] h-[100%]">
-          <video autoPlay muted playsInline onEnded={handleVideoEnd} className="w-full h-full object-cover">
-            <source src={video} />
+          <video autoPlay muted playsInline onEnded={handleVideoEnd} className="w-full h-full object-contain">
+            <source src={video} type="video/mp4"/>
             Your browser does not support the video tag.
           </video>
       </div>
