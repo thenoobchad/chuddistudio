@@ -18,6 +18,7 @@ import restaurant from "../public/images/restaurant.png"
 import zentryclone from "../public/images/zentryclone.png"
 import chatgptclone from "../public/images/chatgpt.png"
 import { IoLogoWhatsapp } from "react-icons/io"
+import { useState } from "react"
 
 
 
@@ -61,10 +62,12 @@ export const tecSkills = [
 
 
 export default function App() {
+  const [active, setActive] = useState(false)
+
   return (
            
     <main className="w-full">
-    <Header />
+    <Header active={active} setActive={setActive}/>
       
    
     {/* HERO STARTS HERE */}
@@ -131,9 +134,9 @@ export default function App() {
   <div className="py-6 grid grid-cols-1 sm:grid-cols-2  gap-4 ">
           {tecSkills.map((data) => (
             <div className={`max-w-[400px] sm:w-[300px] gap-2 bg-black  p-3 flex flex-wrap`}>
-              <h4 className="w-full flex gap-2 items-center text-sm text-white"><span className="bg-purple-950 p-1 rounded-full text-white">{data.icon}</span>{data.title}</h4>
+              <h4 className="w-full flex gap-2 items-center text-sm text-white"><span className="bg-purple-500 p-1 rounded-full text-white">{data.icon}</span>{data.title}</h4>
               {data.skills.map((skill) => (
-                <span className="text-purple-600 font-semibold text-xs lg:text-sm  px-1 py-[1px]" key={skill}>
+                <span className="text-purple-400 font-semibold text-xs lg:text-sm  px-1 py-[1px]" key={skill}>
                 {skill}
                  </span>
               )) }
@@ -213,27 +216,27 @@ export default function App() {
           </div>
 
           <div className="max-w-[340px] mt-8 flex flex-col gap-2">
-            <h4>Send a message</h4>
-            <p>Fill out the form below i'll get back to you within 24 hours</p>
+            <h4 className="font-semibold" >Send a message</h4>
+            <p className="text-sm italic font-semibold">Fill out the form below i'll get back to you within 24 hours</p>
             <form className="w-full ">
               <div className="flex flex-col gap-2 my-4">
-                <label htmlFor="full name">Full Name</label>
-                <input type="text" placeholder="e.g.John Doe" className="hover:outline-0 outline-0 h-10 text-sm bg-zinc-50/10 px-4 border-b border-zinc-400"/>
+                <label htmlFor="full name" className="text-sm font-semibold text-gray-300">Full Name</label>
+                <input type="text" placeholder="e.g.John Doe" className="hover:outline-0 outline-0 h-10 text-sm bg-purple-400/20 px-4 border-b border-zinc-400"/>
               </div>
 
               <div className="flex flex-col gap-2 my-4">
-                <label htmlFor="full name">Email</label>
-                <input type="text" placeholder="e.g.johndoe@mail.com" className="hover:outline-0 outline-0 h-10 text-sm bg-zinc-50/10 px-4 border-b border-zinc-400"/>
+                <label htmlFor="full name" className="text-sm font-semibold text-gray-300">Email</label>
+                <input type="text" placeholder="e.g.johndoe@mail.com" className="hover:outline-0 outline-0 h-10 text-sm bg-purple-400/20 px-4 border-b border-zinc-400"/>
               </div>
 
               <div className="flex flex-col gap-2 my-4">
-                <label htmlFor="full name">Subject</label>
-                <input type="text" placeholder="project collaboration" className="hover:outline-0 outline-0 h-10 text-sm bg-zinc-50/10 px-4 border-b border-zinc-400"/>
+                <label htmlFor="full name" className="text-sm  font-semibold text-gray-300">Subject</label>
+                <input type="text" placeholder="project collaboration" className="hover:outline-0 outline-0 h-10 text-sm bg-purple-400/20 px-4 border-b border-zinc-400"/>
               </div>
 
               <div className="flex flex-col gap-2 my-4">
-                <label htmlFor="full name">Message</label>
-                <textarea cols={1} rows={3} type="text" placeholder="tell me about your project" className="hover:outline-0 outline-0 h-full text-sm bg-zinc-50/10 py-2 px-4 border-b border-zinc-400"/>
+                <label htmlFor="full name" className="text-sm  font-semibold text-gray-300">Message</label>
+                <textarea cols={1} rows={3} type="text" placeholder="tell me about your project" className="hover:outline-0 outline-0 h-full text-sm bg-purple-400/20 py-2 px-4 border-b border-zinc-400"/>
               </div>
                <Button className="mt-7 text-base font-semibold w-full text-white text-center bg-purple-950 justify-center">Send Message</Button>
             </form>
@@ -241,9 +244,9 @@ export default function App() {
     </div>
       </section>
       
-      <a href="https://wa.me/2348068156622" target="_blank">
-      <IoLogoWhatsapp className="text-green-500 fixed bottom-3 z-50 animate-pulse right-4 w-8 h-8" />
-      </a>
+      {active && <a href="https://wa.me/2348068156622" target="_blank">
+        <IoLogoWhatsapp className="text-green-500 fixed bottom-6 z-20 animate-pulse right-10 w-10 h-10" />
+      </a>}
    
     
       <Footer />
@@ -317,7 +320,7 @@ const SkillCard = ({data}) => {
           <p className="text-xs text-justify mb-2">{data.desc}</p>
              <div className="flex flex-wrap gap-2">
              {data.skills.map((skill) => (
-             <span className="text-purple-500  text-[10px]   px-1 py-[2px] hover:bg-purple-600 hover:text-white rounded-full" key={skill}>
+             <span className="text-purple-400  text-[12px] px-1 py-[2px] hover:bg-purple-600 hover:text-white rounded-full" key={skill}>
               {skill}
                </span>
         ))}

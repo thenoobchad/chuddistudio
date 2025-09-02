@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react"
 
 
-export const Header = () => {
+export const Header = ({active, setActive}) => {
   const [isOpen, setIsOpen] = useState(false)
-  const [active, setActive] = useState(false)
+ 
 
   const scrollYposition = () => {
     window.scrollY > 40 ? setActive(true) : setActive(false);
@@ -28,27 +28,48 @@ export const Header = () => {
     <header className={`${active ? "fixed w-full   top-0  p-2 transition-all delay-200 !h-18":""} h-14 w-screen absolute flex items-center justify-between z-30`}>
 
       {!isOpen && <nav className={`${active && "bg-zinc-950"} w-full flex justify-between  gap-4 relative ${isOpen && "absolute bg-transparent"} h-full items-center px-4`}>
-        <a>HEO</a>
-        <ul className="flex items-center gap-4 text-gray-100 font-semibold pl-4 z-10">
-          <a href="#" className="whitespace-nowrap tracking-tight">About us</a>
-          <a href="#" className="whitespace-nowrap tracking-tight">Services</a>
-          <a href="#" className="whitespace-nowrap tracking-tight">Case studies</a>
-        </ul>
+        <a href="/" className="font-bold ">HEO</a>
+        
 
         <HamburgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />
       </nav>}
 
     
-      <div className={`${!isOpen ? "translate-x-[100%] transition-all duration-300" : "translate-x-[0%] transition-all duration-300"} absolute top-0 right-0 z-50 w-[50%] md:w-[30%] xl:w-[20%] min-h-screen bg-zinc-950`}>
+      <div className={`${!isOpen ? "translate-x-[100%] transition-all duration-300" : "translate-x-[0%] transition-all duration-300"} absolute top-0 right-0 z-50 w-[50%] md:w-[30%] xl:w-[20%] min-h-screen  bg-zinc-950`}>
+       <div className="flex justify-between items-center px-4">
         <span className="h-14 flex items-center">navigation</span>
-        <span onClick={() => setIsOpen(false)}>Exit</span>
+          <span onClick={() => setIsOpen(false)}>
+             <HamburgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />
+          </span>
+       </div>
         <div className="w-full h-full flex flex-col items-center">
-          <ul className="flex flex-col py-4 gap-4">
-            <li>About</li>
-            <li>Projects</li>
-            <li>Skills</li>
-            <li>Contact</li>
+          <ul className="flex flex-col py-4 gap-6 h-full w-full items-center text-sm font-semibold text-gray-300 ">
+            <li >
+              <a href="#about" className="hover:text-purple-950">
+                About
+              </a>
+            </li>
+             <li>
+              <a href="#about" className="hover:text-purple-950">
+                Projects
+              </a>
+            </li>
+             <li>
+              <a href="#skills" className="hover:text-purple-950">
+                Skills
+              </a>
+            </li>
+            
+             <li>
+              <a href="#about" className="hover:text-purple-950">
+                Contact
+              </a>
+            </li>
+            
           </ul>
+        </div>
+        <div>
+          <h4></h4>
         </div>
       </div>
 
