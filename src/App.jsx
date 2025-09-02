@@ -21,7 +21,8 @@ import { IoLogoWhatsapp } from "react-icons/io"
 import { useState } from "react"
 
 
-
+//Video file
+import video from "../public/files/screen.mp4"
 
 
 export const tecSkills = [
@@ -64,193 +65,211 @@ export const tecSkills = [
 export default function App() {
   const [active, setActive] = useState(false)
 
-  return (
-           
-    <main className="w-full">
-    <Header active={active} setActive={setActive}/>
-      
-   
-    {/* HERO STARTS HERE */}
+  const [showVideo, setShowVideo] = useState(true)
 
+
+  const handleVideoEnd = () => {
+    setShowVideo(false)
+   }
   
-      <section id="hero" className=" p-2 py-6 flex flex-col h-screen relative items-center justify-center bg-cover bg-no-repeat bg-center" style={{ backgroundImage: "url('/images/bgcode.jpg')" }}>
-        <div className="absolute inset-0 bg-zinc-950/95 z-10"/>
-        <div className="relative z-20 max-w-152 md:max-w-202 gap-4 flex flex-col">
-
-          
-          
-          <h4 className="text-4xl md:text-6xl font-extrabold ">Hi, i'm Henry <br />  Elueme Ositadimma</h4>
-          
-        <h3 className="font-semibold">Full Stack Web Developer & Software Engineer . . . </h3>
-        
-          <div className="flex gap-4">
-
-            <a href="/files/henry_cv.pdf" download>
-              <Button className="mt-4 text-base font-semibold w-fit text-white bg-gray-950">Download Resume</Button>
-             </a>
-            
-
-        <Button className="mt-4 text-base font-semibold w-fit text-white bg-purple-950">Let's chat!</Button>
-          </div>
-          
-    </div>
-    </section>
-
-
-    {/* HERO ENDS HERE */}
-
-    {/* ABOUT ME */}
-    <section id="about" className="text-white bg-gray-950 p-2 py-6 flex flex-col min-h-screen items-center justify-center">
-         <div className="max-w-202 md:max-w-302  mx-auto w-full pb-10">
-
-           <h4 className="text-md underline  font-bold my-8 text-zinc-500">about me</h4>
-          <h4 className="text-3xl capitalize font-semibold text-center pb-4">A web developer passionate about <br/>bringing ideas to life</h4>
-          <div className="flex flex-col md:flex-row gap-4">
-             <div className="md:w-1/2 w-full">
-              
-              <img src="/images/hero.png" className="h-full w-full bg-cover bg-no-repeat animate-pulse"/>
-            </div>
-            <div className="md:w-1/2 w-full flex justify-center items-center">
-         
-              <p className="text-justify">I am a Full stack developer specializing in frontend development with a strong understnding of backend architecture, I build dynamic and scalable applications. </p>
-            </div>
-           
-          
-        </div>
+  return (
+    <>
+      {showVideo ? (
+        <div className="fixed top-0 left-0 w-[100%] h-[100%]">
+          <video autoPlay muted playsInline onEnded={handleVideoEnd} className="w-full h-full object-cover">
+            <source src={video} />
+            Your browser does not support the video tag.
+          </video>
       </div>
+      ) : (
+         <main className="w-full">
+      <Header active={active} setActive={setActive}/>
         
-    </section>
-      {/* ABOUT US ENDS HERE */}
-      
-
-{/* SKILLS & EXPERTIES */}
-    <section id="skills" className="p-2 py-6 flex flex-col min-h-screen items-center justify-center">
-      <div className="max-w-202 md:max-w-302  mx-auto w-full">
-
-      
-      <SectionHeading section="skills & technologies" heading="Software technical experties" subheading="Tools and technologies i frequently work with in actualizing ideas and bringing applications to life."/>
-      
-    </div>
-  <div className="py-6 grid grid-cols-1 sm:grid-cols-2  gap-4 ">
-          {tecSkills.map((data) => (
-            <div className={`max-w-[400px] sm:w-[300px] gap-2 bg-black  p-3 flex flex-wrap`}>
-              <h4 className="w-full flex gap-2 items-center text-sm text-white"><span className="bg-purple-500 p-1 rounded-full text-white">{data.icon}</span>{data.title}</h4>
-              {data.skills.map((skill) => (
-                <span className="text-purple-400 font-semibold text-xs lg:text-sm  px-1 py-[1px]" key={skill}>
-                {skill}
-                 </span>
-              )) }
-
-        </div>
-    ))}
-         
-            
-   
-          </div>
-       
-
-
-  </section>
+    
+      {/* HERO STARTS HERE */}
 
     
-   {/* FEATURED PROJECT SESSION */}
- <section id="skills" className="p-2 py-6 flex flex-col min-h-screen items-center justify-center">
-  <div className="max-w-202 md:max-w-302  mx-auto w-full">
-          <SectionHeading section="featured projects" heading="Software Projects built" subheading="Some of my recent projects showcasing my skill and experience, as well personal projects"/>
-      
-         
-          <div className="w-full container  mx-auto flex flex-col items-center gap-2">
+        <section id="hero" className=" p-2 py-6 flex flex-col h-screen relative items-center justify-center bg-cover bg-no-repeat bg-center" style={{ backgroundImage: "url('/images/bgcode.jpg')" }}>
+          <div className="absolute inset-0 bg-zinc-950/95 z-10"/>
+          <div className="relative z-20 max-w-152 md:max-w-202 gap-4 flex flex-col">
+
             
-
-    </div>
-
-     <div className="mx-2 sm:mx-0 py-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-      {projects.map((data) => (
-      <SkillCard data={data} />
-      ))}
-          </div>
- 
-</div>
-
-{/* WORK EXPERIENCE */}
-</section>
-      
-<section id="skills" className="p-2 py-6 flex flex-col min-h-screen items-center justify-center">
-        <div className="max-w-202 md:max-w-302  mx-auto w-full">
-          <SectionHeading section="work experience" heading="My Professional Software Journey" subheading="Some of the companies and clients i have ahd the pleasure of working and growing with."/>
+            
+            <h4 className="text-4xl md:text-6xl font-extrabold ">Hi, i'm Henry <br />  Elueme Ositadimma</h4>
+            
+          <h3 className="font-semibold">Full Stack Web Developer & Software Engineer . . . </h3>
           
-       
-      <div className="w-full container  mx-auto flex flex-col items-center gap-2">
+            <div className="flex gap-4">
 
-      <p></p>
-      </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-            {experience.map((exp) => (
-              <ExperienceCard exp={exp} key={exp.id} />
-            ))}
-
-          </div>
-
-     </div>
-  </section>
-
-     
-   {/* GET IN TOUCH SECTION */}
-
-    <section id="skills" className="p-2 py-6 flex flex-col min-h-screen items-center justify-center">
-        <div className="max-w-202 md:max-w-302  mx-auto w-full">
-          <SectionHeading section="get in touch" heading="Share Your Ideas, Lets Make it Happen" subheading={`I will very much love to see your project become a real world application. Got an interesting project?  Let's discus how we can work together.`} />
-          
-         
-        </div>
-        <div className="w-full container  mx-auto flex flex-col items-center gap-2 justify-center">
-
-          <p className="text-center"></p>
-          
-          <div>
-            <ul>
-              <li className="flex gap-4"><MdLocationOn className="w-5 h-6" /> Port Harcourt, Nigeria</li>
+              <a href="/files/henry_cv.pdf" download>
+                <Button className="mt-4 text-base font-semibold w-fit text-white bg-gray-950">Download Resume</Button>
+              </a>
               
-               <li className="flex gap-4"><IoMail className="w-5 h-6" /> chidielueme@gmail.com</li>             
-            </ul>
-          </div>
 
-          <div className="max-w-[340px] mt-8 flex flex-col gap-2">
-            <h4 className="font-semibold" >Send a message</h4>
-            <p className="text-sm italic font-semibold">Fill out the form below i'll get back to you within 24 hours</p>
-            <form className="w-full ">
-              <div className="flex flex-col gap-2 my-4">
-                <label htmlFor="full name" className="text-sm font-semibold text-gray-300">Full Name</label>
-                <input type="text" placeholder="e.g.John Doe" className="hover:outline-0 outline-0 h-10 text-sm bg-purple-400/20 px-4 border-b border-zinc-400"/>
-              </div>
-
-              <div className="flex flex-col gap-2 my-4">
-                <label htmlFor="full name" className="text-sm font-semibold text-gray-300">Email</label>
-                <input type="text" placeholder="e.g.johndoe@mail.com" className="hover:outline-0 outline-0 h-10 text-sm bg-purple-400/20 px-4 border-b border-zinc-400"/>
-              </div>
-
-              <div className="flex flex-col gap-2 my-4">
-                <label htmlFor="full name" className="text-sm  font-semibold text-gray-300">Subject</label>
-                <input type="text" placeholder="project collaboration" className="hover:outline-0 outline-0 h-10 text-sm bg-purple-400/20 px-4 border-b border-zinc-400"/>
-              </div>
-
-              <div className="flex flex-col gap-2 my-4">
-                <label htmlFor="full name" className="text-sm  font-semibold text-gray-300">Message</label>
-                <textarea cols={1} rows={3} type="text" placeholder="tell me about your project" className="hover:outline-0 outline-0 h-full text-sm bg-purple-400/20 py-2 px-4 border-b border-zinc-400"/>
-              </div>
-               <Button className="mt-7 text-base font-semibold w-full text-white text-center bg-purple-950 justify-center">Send Message</Button>
-            </form>
-          </div>
-    </div>
+          <Button className="mt-4 text-base font-semibold w-fit text-white bg-purple-950">Let's chat!</Button>
+            </div>
+            
+      </div>
       </section>
-      
-      {active && <a href="https://wa.me/2348068156622" target="_blank">
-        <IoLogoWhatsapp className="text-green-500 fixed bottom-6 z-20 animate-pulse right-10 w-10 h-10" />
-      </a>}
-   
+
+
+      {/* HERO ENDS HERE */}
+
+      {/* ABOUT ME */}
+      <section id="about" className="text-white bg-gray-950 p-2 py-6 flex flex-col min-h-screen items-center justify-center">
+          <div className="max-w-202 md:max-w-302  mx-auto w-full pb-10">
+
+            <h4 className="text-md underline  font-bold my-8 text-zinc-500">about me</h4>
+            <h4 className="text-3xl capitalize font-semibold text-center pb-4">A web developer passionate about <br/>bringing ideas to life</h4>
+            <div className="flex flex-col md:flex-row gap-4">
+              <div className="md:w-1/2 w-full">
+                
+                <img src="/images/hero.png" className="h-full w-full bg-cover bg-no-repeat animate-pulse"/>
+              </div>
+              <div className="md:w-1/2 w-full flex justify-center items-center">
+          
+                <p className="text-justify">I am a Full stack developer specializing in frontend development with a strong understnding of backend architecture, I build dynamic and scalable applications. </p>
+              </div>
+            
+            
+          </div>
+        </div>
+          
+      </section>
+        {/* ABOUT US ENDS HERE */}
+        
+
+  {/* SKILLS & EXPERTIES */}
+      <section id="skills" className="p-2 py-6 flex flex-col min-h-screen items-center justify-center">
+        <div className="max-w-202 md:max-w-302  mx-auto w-full">
+
+        
+        <SectionHeading section="skills & technologies" heading="Software technical experties" subheading="Tools and technologies i frequently work with in actualizing ideas and bringing applications to life."/>
+        
+      </div>
+    <div className="py-6 grid grid-cols-1 sm:grid-cols-2  gap-4 ">
+            {tecSkills.map((data) => (
+              <div className={`max-w-[400px] sm:w-[300px] gap-2 bg-black  p-3 flex flex-wrap`}>
+                <h4 className="w-full flex gap-2 items-center text-sm text-white"><span className="bg-purple-500 p-1 rounded-full text-white">{data.icon}</span>{data.title}</h4>
+                {data.skills.map((skill) => (
+                  <span className="text-purple-400 font-semibold text-xs lg:text-sm  px-1 py-[1px]" key={skill}>
+                  {skill}
+                  </span>
+                )) }
+
+          </div>
+      ))}
+          
+              
     
-      <Footer />
-    </main>
+            </div>
+        
+
+
+    </section>
+
+      
+    {/* FEATURED PROJECT SESSION */}
+  <section id="skills" className="p-2 py-6 flex flex-col min-h-screen items-center justify-center">
+    <div className="max-w-202 md:max-w-302  mx-auto w-full">
+            <SectionHeading section="featured projects" heading="Software Projects built" subheading="Some of my recent projects showcasing my skill and experience, as well personal projects"/>
+        
+          
+            <div className="w-full container  mx-auto flex flex-col items-center gap-2">
+              
+
+      </div>
+
+      <div className="mx-2 sm:mx-0 py-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        {projects.map((data) => (
+        <SkillCard data={data} />
+        ))}
+            </div>
+  
+  </div>
+
+  {/* WORK EXPERIENCE */}
+  </section>
+        
+  <section id="skills" className="p-2 py-6 flex flex-col min-h-screen items-center justify-center">
+          <div className="max-w-202 md:max-w-302  mx-auto w-full">
+            <SectionHeading section="work experience" heading="My Professional Software Journey" subheading="Some of the companies and clients i have ahd the pleasure of working and growing with."/>
+            
+        
+        <div className="w-full container  mx-auto flex flex-col items-center gap-2">
+
+        <p></p>
+        </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+              {experience.map((exp) => (
+                <ExperienceCard exp={exp} key={exp.id} />
+              ))}
+
+            </div>
+
+      </div>
+    </section>
+
+      
+    {/* GET IN TOUCH SECTION */}
+
+      <section id="skills" className="p-2 py-6 flex flex-col min-h-screen items-center justify-center">
+          <div className="max-w-202 md:max-w-302  mx-auto w-full">
+            <SectionHeading section="get in touch" heading="Share Your Ideas, Lets Make it Happen" subheading={`I will very much love to see your project become a real world application. Got an interesting project?  Let's discus how we can work together.`} />
+            
+          
+          </div>
+          <div className="w-full container  mx-auto flex flex-col items-center gap-2 justify-center">
+
+            <p className="text-center"></p>
+            
+            <div>
+              <ul>
+                <li className="flex gap-4"><MdLocationOn className="w-5 h-6" /> Port Harcourt, Nigeria</li>
+                
+                <li className="flex gap-4"><IoMail className="w-5 h-6" /> chidielueme@gmail.com</li>             
+              </ul>
+            </div>
+
+            <div className="max-w-[340px] mt-8 flex flex-col gap-2">
+              <h4 className="font-semibold" >Send a message</h4>
+              <p className="text-sm italic font-semibold">Fill out the form below i'll get back to you within 24 hours</p>
+              <form className="w-full ">
+                <div className="flex flex-col gap-2 my-4">
+                  <label htmlFor="full name" className="text-sm font-semibold text-gray-300">Full Name</label>
+                  <input type="text" placeholder="e.g.John Doe" className="hover:outline-0 outline-0 h-10 text-sm bg-purple-400/20 px-4 border-b border-zinc-400"/>
+                </div>
+
+                <div className="flex flex-col gap-2 my-4">
+                  <label htmlFor="full name" className="text-sm font-semibold text-gray-300">Email</label>
+                  <input type="text" placeholder="e.g.johndoe@mail.com" className="hover:outline-0 outline-0 h-10 text-sm bg-purple-400/20 px-4 border-b border-zinc-400"/>
+                </div>
+
+                <div className="flex flex-col gap-2 my-4">
+                  <label htmlFor="full name" className="text-sm  font-semibold text-gray-300">Subject</label>
+                  <input type="text" placeholder="project collaboration" className="hover:outline-0 outline-0 h-10 text-sm bg-purple-400/20 px-4 border-b border-zinc-400"/>
+                </div>
+
+                <div className="flex flex-col gap-2 my-4">
+                  <label htmlFor="full name" className="text-sm  font-semibold text-gray-300">Message</label>
+                  <textarea cols={1} rows={3} type="text" placeholder="tell me about your project" className="hover:outline-0 outline-0 h-full text-sm bg-purple-400/20 py-2 px-4 border-b border-zinc-400"/>
+                </div>
+                <Button className="mt-7 text-base font-semibold w-full text-white text-center bg-purple-950 justify-center">Send Message</Button>
+              </form>
+            </div>
+      </div>
+        </section>
+        
+        {active && <a href="https://wa.me/2348068156622" target="_blank">
+          <IoLogoWhatsapp className="text-green-500 fixed bottom-6 z-20 animate-pulse right-10 w-10 h-10" />
+        </a>}
+    
+      
+        <Footer />
+      </main>
+      )} 
+     
+    </>
   )
 }
 

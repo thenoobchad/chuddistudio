@@ -35,33 +35,36 @@ export const Header = ({active, setActive}) => {
       </nav>}
 
     
-      <div className={`${!isOpen ? "translate-x-[100%] transition-all duration-300" : "translate-x-[0%] transition-all duration-300"} absolute top-0 right-0 z-50 w-[50%] md:w-[30%] xl:w-[20%] min-h-screen  bg-zinc-950`}>
-       <div className="flex justify-between items-center px-4">
-        <span className="h-14 flex items-center">navigation</span>
-          <span onClick={() => setIsOpen(false)}>
+      <div className={`${!isOpen ? "translate-x-[100%] transition-all duration-300" : "translate-x-[0%] transition-all duration-300"} absolute top-0 right-0 z-50 w-[70%] md:w-[30%] xl:w-[20%] min-h-screen  bg-zinc-950`}>
+       <div className="flex justify-between items-center px-4 flex-col py-4">
+        
+          <div
+           
+            
+            className="w-full flex justify-end ">
              <HamburgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />
-          </span>
+          </div>
        </div>
         <div className="w-full h-full flex flex-col items-center">
-          <ul className="flex flex-col py-4 gap-6 h-full w-full items-center text-sm font-semibold text-gray-300 ">
-            <li >
-              <a href="#about" className="hover:text-purple-950">
+          <ul className="flex flex-col py-4 gap-2 h-full w-full items-center text-sm font-semibold text-gray-300 ">
+            <li className="w-full h-full py-4 hover:bg-gray-800 flex justify-center hover:text-purple-500">
+              <a href="#about" className="">
                 About
               </a>
             </li>
-             <li>
-              <a href="#about" className="hover:text-purple-950">
+             <li className="w-full h-full py-4 hover:bg-gray-800 flex justify-center hover:text-purple-500">
+              <a href="#about" >
                 Projects
               </a>
             </li>
-             <li>
-              <a href="#skills" className="hover:text-purple-950">
+             <li className="w-full h-full py-4 hover:bg-gray-800 flex justify-center hover:text-purple-500">
+              <a href="#skills" >
                 Skills
               </a>
             </li>
             
-             <li>
-              <a href="#about" className="hover:text-purple-950">
+             <li className="w-full h-full py-4 hover:bg-gray-800 flex justify-center hover:text-purple-500">
+              <a href="#about" >
                 Contact
               </a>
             </li>
