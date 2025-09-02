@@ -8,24 +8,25 @@ export const experience = [
     id: 1,
     title: "Frontend Developer",
     company: "Digispert Technologies",
-    date: "2025 - Present",
+    date: "2024 - 2025",
     location: "Remote",
     tasks: [
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit, eius",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, nulla",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, totam. Veniam", "fuga sit quasi deleniti assumenda incidunt asperiores, earum provident accusamus ut", "libero officiis voluptas minima reprehenderit iusto cum maiores?"
+      "Built landing pages for the company website.",
+      "Worked with Figma files and brought pags to life.",
+      "Created responsive pages for all screen sizes.", "Collaborated with other developers on projects using Git", "Implemented NextJs and Tailwind CSS for the development of landing pages."
     ]
   },
   {
     id: 2,
-    title: "Backend Developer",
-    company: "Tous Properties",
-    date: "2024 - 2025",
+    title: "Full Staack Developer",
+    company: "Maria Shop",
+    date: "02/2024 - 04/2024",
     location: "Remote",
     tasks: [
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit, eius",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, nulla",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, totam. Veniam", "fuga sit quasi deleniti assumenda incidunt asperiores, earum provident accusamus ut", "libero officiis voluptas minima reprehenderit iusto cum maiores?"
+      "Developed API for product listing website.",
+      "Built Admin login authentication and panel with admin privileges for CRUD operations.",
+      "Created responsive pages for website with responsiveness",
+      "Collaborated with other developers on projects using Git"
     ]
   },
   {
@@ -35,9 +36,9 @@ export const experience = [
     date: "2023 - 2024",
     location: "Remote",
     tasks: [
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit, eius",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, nulla",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, totam. Veniam", "fuga sit quasi deleniti assumenda incidunt asperiores, earum provident accusamus ut", "libero officiis voluptas minima reprehenderit iusto cum maiores?"
+      "Built Shop Page, Checkout and User dashboard",
+      "Constanly maintained and updated website with necessary SEO practices.",
+      "Worked with the UI/UX team in designing User friendly experiences.", "Collaborated with Project manager on product experiences within the website."
     ]
   }
 ]

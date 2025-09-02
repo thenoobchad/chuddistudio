@@ -63,7 +63,7 @@ export default function App() {
   return (
            
     <main className="w-full">
-  <Header />
+    <Header />
       
    
     {/* HERO STARTS HERE */}
@@ -119,7 +119,7 @@ export default function App() {
       {/* ABOUT US ENDS HERE */}
       
 
-
+{/* SKILLS & EXPERTIES */}
     <section id="skills" className="p-2 py-6 flex flex-col min-h-screen items-center justify-center">
       <div className="max-w-202 md:max-w-302  mx-auto w-full">
 
@@ -129,10 +129,10 @@ export default function App() {
     </div>
   <div className="py-6 grid grid-cols-1 sm:grid-cols-2  gap-4 ">
           {tecSkills.map((data) => (
-            <div className={`max-w-[400px] sm:w-[300px] gap-2 bg-white rounded-sm p-3 flex flex-wrap`}>
-              <h4 className="w-full flex gap-2 items-center text-sm text-black"><span className="bg-purple-950 p-1 rounded-full text-white">{data.icon}</span>{data.title}</h4>
+            <div className={`max-w-[400px] sm:w-[300px] gap-2 bg-black  p-3 flex flex-wrap`}>
+              <h4 className="w-full flex gap-2 items-center text-sm text-white"><span className="bg-purple-950 p-1 rounded-full text-white">{data.icon}</span>{data.title}</h4>
               {data.skills.map((skill) => (
-                <span className="text-black text-xs lg:text-sm  px-2 py-[2px] rounded-full bg-purple-100" key={skill}>
+                <span className="text-purple-600 font-semibold text-xs lg:text-sm  px-1 py-[1px]" key={skill}>
                 {skill}
                  </span>
               )) }
@@ -168,7 +168,7 @@ export default function App() {
  
 </div>
 
- {/* PROJECTS ENDS  */}
+{/* WORK EXPERIENCE */}
 </section>
       
 <section id="skills" className="p-2 py-6 flex flex-col min-h-screen items-center justify-center">
@@ -279,7 +279,7 @@ const projects = [
     id: 3,
     title: "Zentry clone",
     image: zentryclone,
-    desc: "The clone Zentry a gaming website known for its visual effects and stunning graphics that captures the eyes and heart.",
+    desc: "The Zentry website clone, a gaming website known for its visual effects and stunning graphics that captures the eyes and heart.",
     skills: ["ReactJs", "GSAP", "Tailwindcss", "Typescript"],
     link:"https://zentry-mu-seven.vercel.app"
   }
@@ -312,7 +312,7 @@ const SkillCard = ({data}) => {
           <p className="text-xs text-justify mb-2">{data.desc}</p>
              <div className="flex flex-wrap gap-2">
              {data.skills.map((skill) => (
-             <span className="text-purple-500  text-[10px]   px-1 py-[2px] border rounded-full" key={skill}>
+             <span className="text-purple-500  text-[10px]   px-1 py-[2px] hover:bg-purple-600 hover:text-white rounded-full" key={skill}>
               {skill}
                </span>
         ))}
