@@ -20,13 +20,14 @@ export const Header = () => {
   useEffect(() => {
     
     window.addEventListener("click", setIsOpen(false))
-  },[])
+  }, [])
  
 
-  return (
-    <header className={`${active ? "fixed w-full   top-0  p-2 transition-all delay-200 !h-18":""} h-14 flex items-center justify-between z-30`}>
+  return (<>
+    
+    <header className={`${active ? "fixed w-full   top-0  p-2 transition-all delay-200 !h-18":""} h-14 w-screen absolute flex items-center justify-between z-30`}>
 
-      {!isOpen && <nav className={`${active && "bg-zinc-950"} w-full flex justify-between  gap-4 relative h-full items-center px-4`}>
+      {!isOpen && <nav className={`${active && "bg-zinc-950"} w-full flex justify-between  gap-4 relative ${isOpen && "absolute bg-transparent"} h-full items-center px-4`}>
         <a>HEO</a>
         <ul className="flex items-center gap-4 text-gray-100 font-semibold pl-4 z-10">
           <a href="#" className="whitespace-nowrap tracking-tight">About us</a>
@@ -51,7 +52,9 @@ export const Header = () => {
         </div>
       </div>
 
-  </header>
+    </header>
+  
+     </>
   )
 }
 
@@ -64,6 +67,7 @@ const HamburgerMenu = ({ isOpen, setIsOpen }) => {
     
       <div className={`${isOpen ? "rotate-45 -translate-y transition-all ease-in-out duration-300": "-rotate-0 transition-all ease-in-out duration-300"} h-1 w-8  mb-2 bg-white/90`}/>
     </div>
+   
   )
 }
 

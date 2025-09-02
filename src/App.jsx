@@ -8,10 +8,16 @@ import { IoMail } from "react-icons/io5"
 import { Footer } from "./components/footer"
 import { Header } from "./components/header"
 
-//
+//icons
 import { FaCode, FaDatabase, FaTools } from "react-icons/fa"
 import { AiFillDatabase } from "react-icons/ai"
 import { SectionHeading } from "./components/section-heading"
+
+//images
+import restaurant from "../public/images/restaurant.png"
+import zentryclone from "../public/images/zentryclone.png"
+import chatgptclone from "../public/images/chatgpt.png"
+
 
 
 
@@ -93,7 +99,7 @@ export default function App() {
     <section id="about" className="text-white bg-gray-950 p-2 py-6 flex flex-col min-h-screen items-center justify-center">
          <div className="max-w-202 md:max-w-302  mx-auto w-full pb-10">
 
-           <h4 className="text-md underline  font-bold my-8">about me</h4>
+           <h4 className="text-md underline  font-bold my-8 text-zinc-500">about me</h4>
           <h4 className="text-3xl capitalize font-semibold text-center pb-4">A web developer passionate about <br/>bringing ideas to life</h4>
           <div className="flex flex-col md:flex-row gap-4">
              <div className="md:w-1/2 w-full">
@@ -129,10 +135,8 @@ export default function App() {
                 <span className="text-black text-xs lg:text-sm  px-2 py-[2px] rounded-full bg-purple-100" key={skill}>
                 {skill}
                  </span>
-              ))
-                
-              }
-           
+              )) }
+
         </div>
     ))}
          
@@ -154,7 +158,6 @@ export default function App() {
           <div className="w-full container  mx-auto flex flex-col items-center gap-2">
             
 
-    <p></p>
     </div>
 
      <div className="mx-2 sm:mx-0 py-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -256,7 +259,8 @@ const Button = ({ children, className }) => {
 const projects = [
   {
     id: 1,
-    title: "Health Tracker",
+    title: "Zentry clone",
+    image: "",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic accusantium inventore minus. Dolor impedit aspernatur odit sit voluptas itaque illo",
     skills: ["Nextjs", "Server actions", "MySQL", "Rest APIs", "Nodejs", "Tailwindcss", "Typescript"],
     link:"http://www.github.com"
@@ -264,28 +268,30 @@ const projects = [
 
   {
     id: 2,
-    title: "JB Properties and Housing",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic accusantium inventore minus. Dolor impedit aspernatur odit sit voluptas itaque illo",
-    skills: ["Nextjs", "MongoDB", "MySQL", "Rest APIs", "Nodejs", "Tailwindcss", "Typescript"],
+    title: "ChatGPT Clone ",
+    image: chatgptclone,
+    desc: "Landing page for the famous ChatGPT 2022, with About section and blog post section.",
+    skills: ["Reactjs", "Styled components", "Tailwindcss", "Typescript"],
     link:"http://www.github.com"
   },
 
   {
     id: 3,
-    title: "Herbspro Technology",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic accusantium inventore minus. Dolor impedit aspernatur odit sit voluptas itaque illo",
-    skills: ["Nextjs", "MySQL", "Rest APIs", "Nodejs", "Tailwindcss", "Typescript"],
-    link:"http://www.github.com"
+    title: "Zentry clone",
+    image: zentryclone,
+    desc: "The clone Zentry a gaming website known for its visual effects and stunning graphics that captures the eyes and heart.",
+    skills: ["ReactJs", "GSAP", "Tailwindcss", "Typescript"],
+    link:"https://zentry-mu-seven.vercel.app"
   }
   ,
   {
     id: 4,
-    title: "Herbspro Technology",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic accusantium inventore minus. Dolor impedit aspernatur odit sit voluptas itaque illo",
-    skills: ["Nextjs", "MySQL", "Rest APIs", "Nodejs", "Tailwindcss", "Typescript"],
-    link:"http://www.github.com"
+    title: "Gericht Restaurant",
+    image: restaurant,
+    desc: "Landing Page for a restaurant business. showcasing cusines and their prices.",
+    skills: ["HTML", "CSS" ,"ReactJs", "Styled components",  "Tailwindcss"],
+    link:"https://mealtosh.netlify.app"
   }
-
 
 ]
 
@@ -294,22 +300,28 @@ const projects = [
 
 const SkillCard = ({data}) => {
   return (
-    <div key={data.id}>
-    <div></div>
+    <div key={data.id} className="h-[2/3] flex flex-col">
+      <div className="">
+        <img src={data.image} alt={data.title} />
+    </div>
     
-    <div className="bg-white/10 p-4 rounded-sm">
-        <h4 className="text-lg font-bold">{data.title}</h4>
+      <div className="h-full bg-black p-2" >
+        
+        <h4 className="text-lg font-bold text-white/90">{data.title}</h4>
           <h2 className="text-sm text-gray-400 py-2">{data.title}</h2>
-          <p className="text-sm text-justify mb-2">{data.desc}</p>
+          <p className="text-xs text-justify mb-2">{data.desc}</p>
              <div className="flex flex-wrap gap-2">
              {data.skills.map((skill) => (
-             <span className="bg-purple-300/30 text-xs lg:text-sm  px-2 py-1 rounded-full" key={skill}>
+             <span className="text-purple-500  text-[10px]   px-1 py-[2px] border rounded-full" key={skill}>
               {skill}
                </span>
         ))}
        
+        </div>
+        <a className="text-xs italic pt-4 underline" href={data.link}>View website</a>
       </div>
-    </div>
+      
+      
    </div>
   )
 }
