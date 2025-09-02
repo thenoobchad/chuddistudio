@@ -17,6 +17,7 @@ import { SectionHeading } from "./components/section-heading"
 import restaurant from "../public/images/restaurant.png"
 import zentryclone from "../public/images/zentryclone.png"
 import chatgptclone from "../public/images/chatgpt.png"
+import { IoLogoWhatsapp } from "react-icons/io"
 
 
 
@@ -238,7 +239,11 @@ export default function App() {
             </form>
           </div>
     </div>
-   </section>
+      </section>
+      
+      <a href="https://wa.me/08068156622" target="_blank">
+      <IoLogoWhatsapp className="text-green-500 fixed bottom-3 z-50 animate-pulse right-4 w-8 h-8" />
+      </a>
    
     
       <Footer />
