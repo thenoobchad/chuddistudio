@@ -126,9 +126,10 @@ export default function App() {
                 
                 <img src="/images/hero.png" className="h-full w-full bg-cover bg-no-repeat animate-pulse"/>
               </div>
-              <div className="md:w-1/2 w-full flex justify-center items-center">
+              <div className="md:w-1/2 w-full flex justify-center items-center flex-col gap-2">
           
-                <p className="text-justify">I am a Full stack developer specializing in frontend development with a strong understnding of backend architecture, I build dynamic and scalable applications. </p>
+                    <p className="text-justify">I am a Full stack developer specializing in frontend development with a strong understnding of backend architecture, I build dynamic and scalable applications using Vite, Next.js and modern backend solutions like server actions, drizzle and databases utilizing MySQL and Relational Database to create seamless user experience and robust backend systems. </p>
+                    <p className="text-justify">My goal is to leverage my understanding of fullstack development to deliver impactful digital products, solve real-world problems, and grow into a technical leadership role where I can contribute to building scalable engineering teams and systems.</p>
               </div>
             
             
