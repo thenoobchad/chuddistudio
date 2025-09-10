@@ -65,7 +65,7 @@ export const tecSkills = [
 export default function App() {
   const [active, setActive] = useState(false)
 
-  const [showVideo, setShowVideo] = useState(true)
+  const [showVideo, setShowVideo] = useState(false)
 
 
   const handleVideoEnd = () => {
@@ -151,7 +151,7 @@ export default function App() {
     <div className="py-6 grid grid-cols-1 sm:grid-cols-2  gap-4 ">
             {tecSkills.map((data) => (
               <div className={`max-w-[400px] sm:w-[300px] gap-2 bg-black  p-3 flex flex-wrap`}>
-                <h4 className="w-full flex gap-2 items-center text-sm text-white"><span className="bg-purple-500 p-1 rounded-full text-white">{data.icon}</span>{data.title}</h4>
+                <h4 className="w-full flex gap-2 items-center text-md text-white"><span className="bg-purple-500 p-1 rounded-full text-white">{data.icon}</span>{data.title}</h4>
                 {data.skills.map((skill) => (
                   <span className="text-purple-400 font-semibold text-xs lg:text-sm  px-1 py-[1px]" key={skill}>
                   {skill}
@@ -287,9 +287,9 @@ const Button = ({ children, className }) => {
 const projects = [
   {
     id: 1,
-    title: "Zentry clone",
+    title: "Tanie Properties",
     image: "",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic accusantium inventore minus. Dolor impedit aspernatur odit sit voluptas itaque illo",
+    desc: "Property listing web application with user authentication, property search and filter, and contact form.",
     skills: ["Nextjs", "Server actions", "MySQL", "Rest APIs", "Nodejs", "Tailwindcss", "Typescript"],
     link:"http://www.github.com"
   },
@@ -337,16 +337,16 @@ const SkillCard = ({data}) => {
         
         <h4 className="text-lg font-bold text-white/90">{data.title}</h4>
           <h2 className="text-sm text-gray-400 py-2">{data.title}</h2>
-          <p className="text-xs text-justify mb-2">{data.desc}</p>
+          <p className="text-sm text-justify mb-2">{data.desc}</p>
              <div className="flex flex-wrap gap-2">
              {data.skills.map((skill) => (
-             <span className="text-purple-400  text-[12px] px-1 py-[2px] hover:bg-purple-600 hover:text-white rounded-full" key={skill}>
+             <span className="text-purple-400  text-sm px-1 py-[2px] hover:bg-purple-600 hover:text-white rounded-full" key={skill}>
               {skill}
                </span>
         ))}
        
         </div>
-        <a className="text-xs italic pt-4 underline" href={data.link}>View website</a>
+        <a className="text-sm italic pt-4 underline" href={data.link}>View website</a>
       </div>
       
       
