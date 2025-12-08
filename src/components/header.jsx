@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 
 
+
 export const Header = ({active, setActive}) => {
   const [isOpen, setIsOpen] = useState(false)
  
@@ -23,63 +24,67 @@ export const Header = ({active, setActive}) => {
   }, [])
  
 
-  return (<>
-    
-    <header className={`${active ? "fixed w-full   top-0  p-2 transition-all delay-200 !h-18":""} h-14 w-screen absolute flex items-center justify-between z-30`}>
+  return (
+		<>
+			<header
+				className={`${
+					active
+						? "fixed w-full   top-0  p-2 transition-all delay-200 !h-18"
+						: ""
+				} h-14 w-screen absolute flex items-center justify-between z-30`}>
+				{!isOpen && (
+					<nav
+						className={`${
+							active && "bg-zinc-950"
+						} w-full flex justify-between  gap-4 relative ${
+							isOpen && "absolute bg-transparent"
+						} h-full items-center px-4`}>
+						<a href="/" className="font-bold ">
+							HEO
+						</a>
 
-      {!isOpen && <nav className={`${active && "bg-zinc-950"} w-full flex justify-between  gap-4 relative ${isOpen && "absolute bg-transparent"} h-full items-center px-4`}>
-        <a href="/" className="font-bold ">HEO</a>
-        
+						{/* <ThemeToggle /> */}
+						<HamburgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />
+					</nav>
+				)}
 
-        <HamburgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />
-      </nav>}
+				<div
+					className={`${
+						!isOpen
+							? "translate-x-[100%] transition-all duration-300"
+							: "translate-x-[0%] transition-all duration-300"
+					} absolute top-0 right-0 z-50 w-[70%] md:w-[30%] xl:w-[20%] min-h-screen  bg-zinc-950`}>
+					<div className="flex justify-between items-center px-4 flex-col py-4">
+						<div className="w-full flex justify-end ">
+							<HamburgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />
+						</div>
+					</div>
+					<div className="w-full h-full flex flex-col items-center">
+						<ul className="flex flex-col py-4 gap-2 h-full w-full items-center text-sm font-semibold text-gray-300 ">
+							<li className="w-full h-full py-4 hover:bg-gray-800 flex justify-center hover:text-purple-500">
+								<a href="#about" className="">
+									About
+								</a>
+							</li>
+							<li className="w-full h-full py-4 hover:bg-gray-800 flex justify-center hover:text-purple-500">
+								<a href="#about">Projects</a>
+							</li>
+							<li className="w-full h-full py-4 hover:bg-gray-800 flex justify-center hover:text-purple-500">
+								<a href="#skills">Skills</a>
+							</li>
 
-    
-      <div className={`${!isOpen ? "translate-x-[100%] transition-all duration-300" : "translate-x-[0%] transition-all duration-300"} absolute top-0 right-0 z-50 w-[70%] md:w-[30%] xl:w-[20%] min-h-screen  bg-zinc-950`}>
-       <div className="flex justify-between items-center px-4 flex-col py-4">
-        
-          <div
-           
-            
-            className="w-full flex justify-end ">
-             <HamburgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />
-          </div>
-       </div>
-        <div className="w-full h-full flex flex-col items-center">
-          <ul className="flex flex-col py-4 gap-2 h-full w-full items-center text-sm font-semibold text-gray-300 ">
-            <li className="w-full h-full py-4 hover:bg-gray-800 flex justify-center hover:text-purple-500">
-              <a href="#about" className="">
-                About
-              </a>
-            </li>
-             <li className="w-full h-full py-4 hover:bg-gray-800 flex justify-center hover:text-purple-500">
-              <a href="#about" >
-                Projects
-              </a>
-            </li>
-             <li className="w-full h-full py-4 hover:bg-gray-800 flex justify-center hover:text-purple-500">
-              <a href="#skills" >
-                Skills
-              </a>
-            </li>
-            
-             <li className="w-full h-full py-4 hover:bg-gray-800 flex justify-center hover:text-purple-500">
-              <a href="#about" >
-                Contact
-              </a>
-            </li>
-            
-          </ul>
-        </div>
-        <div>
-          <h4></h4>
-        </div>
-      </div>
-
-    </header>
-  
-     </>
-  )
+							<li className="w-full h-full py-4 hover:bg-gray-800 flex justify-center hover:text-purple-500">
+								<a href="#about">Contact</a>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<h4></h4>
+					</div>
+				</div>
+			</header>
+		</>
+	);
 }
 
 

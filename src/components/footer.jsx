@@ -4,13 +4,13 @@ import { TiSocialDribbble, TiSocialFacebook, TiSocialTwitter } from "react-icons
 
 export const Footer = () => {
   return (
-    <footer className="w-full bg-black px-2 pt-10 text-gray-50 flex flex-col">
+    <footer className="w-full bg-zinc-900 px-2 pt-10 text-gray-50 flex flex-col">
      
     
       <div className="w-full flex-col flex justify-center pb-6">
 
         
-          <p className="text-[13px]  tracking-wide text-center font-mono">&copy;Copyright 2025. <span >Henry Ositadimma Elueme. All rights reserved.
+          <p className="text-[13px]  tracking-wide text-center font-mono">&copy;Copyright 2025. <span >Chidi Ositadimma Elueme. All rights reserved.
 
           </span>
           </p>
