@@ -279,7 +279,7 @@ const MenuList = ({ isActive }) => {
 				{["stats", "projects", "contact", "skills"].map((c, i) => (
 					<p
 						key={c + i}
-						className="text-7xl uppercase font-bold px-20 border-b hover:cursor-pointer border-zinc-800 pb-4">
+						className="text-5xl md:text-7xl uppercase font-bold px-20 border-b hover:cursor-pointer border-zinc-800 pb-4">
 						{c}
 					</p>
 				))}
