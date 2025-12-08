@@ -11,12 +11,12 @@ export default function Landing() {
 
 	return (
 		<>
-			<MenuList isActive={isActive} />
 			<main className="bg-black text-zinc-50 min-h-screen relative">
+				<MenuList isActive={isActive} />
 				<div className="w-full max-w-5xl h-full mx-auto px-4 py-4 justify-center">
 					{/* Navbar */}
 					<div className="w-full flex justify-end rounded max-w-5xl mx-auto relative top-1 right-2 ">
-						<span className="bg-zinc-900   fixed z-10">
+						<span className="bg-zinc-900   fixed z-70">
 							<HamburgerMenu setIsActive={setIsActive} isActive={isActive} />
 						</span>
 					</div>
@@ -50,8 +50,7 @@ export default function Landing() {
 						</button>
 						<button className=" rounded-full text-lg  font-bold px-6 py-3 l outline flex gap-2 items-center">
 							<a href="/files/henry_cv.pdf" download>
-							
-							Download Resume
+								Download Resume
 							</a>
 						</button>
 					</div>
@@ -150,7 +149,7 @@ export default function Landing() {
 						{[1, 2, 3, 4, 5].map((c, i) => (
 							<div
 								key={c + i}
-								className="border-l-4 border-zinc-500 px-5 w-[200px] py-4 flex flex-col gap-2 bg-zinc-950 lg:bg-transparent  ">
+								className="border-l-4 border-zinc-500 px-5 w-[400px] py-4 flex flex-col gap-6 bg-zinc-950 lg:bg-transparent  ">
 								<h4 className="text-sm">5/5</h4>
 								<p className="text-sm">
 									Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -237,7 +236,7 @@ export default function Landing() {
 						</p>
 						<p className="flex justify-between items-start gap-10">
 							<span className="font-extrabold text-4xl uppercase whitespace-nowrap lg:text-6xl">
-								What a meet?
+								Want a meet?
 							</span>
 
 							<span className="text-xs">
@@ -271,9 +270,27 @@ const MenuList = ({ isActive }) => {
 	return (
 		<div
 			className={`${
-				isActive ? "" : "-translate-x-100"
-			} absolute w-[200px] bg-red-400`}>
-			My Menu List
+				isActive ? "left-0" : "-translate-x-[100%]"
+			} fixed top-0 w-screen min-h-screen bg-zinc-950/80 z-50 transition-all delay-100 ease-in-out`}>
+			<div className="w-[80%] lg:max-w-[550px] bg-zinc-900 flex flex-col h-screen gap-8 py-10 ">
+				<p className="text-lg w-full flex justify-center font-bold">
+					[chidielueme@gmail.com]
+				</p>
+				{["stats", "projects", "contact", "skills"].map((c, i) => (
+					<p
+						key={c + i}
+						className="text-7xl uppercase font-bold px-20 border-b hover:cursor-pointer border-zinc-800 pb-4">
+						{c}
+					</p>
+				))}
+				<div>
+					<p className="px-20">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
+						adipisci laborum velit aspernatur debitis odio inventore neque?
+						Deserunt, facere dolorem?
+					</p>
+				</div>
+			</div>
 		</div>
 	);
 };

@@ -4,7 +4,7 @@ import { TiSocialDribbble, TiSocialFacebook, TiSocialTwitter } from "react-icons
 
 export const Footer = () => {
   return (
-    <footer className="w-full bg-zinc-900 px-2 pt-10 text-gray-50 flex flex-col">
+    <footer className="w-full mt-10 bg-zinc-950 px-2 pt-10 text-gray-50 flex flex-col">
      
     
       <div className="w-full flex-col flex justify-center pb-6">
