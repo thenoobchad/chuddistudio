@@ -61,35 +61,35 @@ export default function Landing() {
 					<div className="grid grid-cols-12 grid-rows-7 h-[400px] gap-6">
 						<div className="border-l-4 border-zinc-500 px-5 py-1 col-span-6 row-span-4 flex flex-col justify-between bg-zinc-950 lg:bg-transparent lg:col-span-3">
 							<h4 className="text-7xl font-extrabold">
-								780<span>+</span>
+								12<span>+</span>
 							</h4>
-							<p className="font-semibold">Hours of in depth designs</p>
+							<p className="font-semibold">Project completed as well as designs</p>
 						</div>
 
 						<div className="border-l-4 px-5 py-1 col-span-6 row-span-3 flex flex-col justify-between border-zinc-500 bg-zinc-950 lg:col-span-3 lg:bg-transparent">
 							<h4 className="text-[70px] font-extrabold">
-								2.3M<span>+</span>
+								3<span>+</span>
 							</h4>
 							<p className="font-semibold">
-								Total Client Business Profit Growth
+								Years of Crafting Digital Experiences
 							</p>
 						</div>
 
 						<div className="border-l-4 px-5 py-1 col-span-6 row-span-4 flex flex-col justify-between border-zinc-500 bg-zinc-950 lg:col-span-3 lg:bg-transparent">
 							<h4 className="text-7xl font-extrabold">
-								150<span>+</span>
+								10<span>+</span>
 							</h4>
 							<p className="font-semibold">
-								Strategic Budget Forecast Delivered
+								Brands Empowered
 							</p>
 						</div>
 
 						<div className="border-l-4 px-5 py-1 col-span-6 row-span-3 flex flex-col justify-between border-zinc-500 bg-zinc-950 lg:col-span-3 lg:bg-transparent">
 							<h4 className="text-7xl font-extrabold">
-								600<span>+</span>
+								30%<span>+</span>
 							</h4>
 							<p className="font-semibold">
-								Hours of Financial advisory and strategic work
+								More Time on Site for Redesigned Pages
 							</p>
 						</div>
 					</div>
@@ -107,19 +107,17 @@ export default function Landing() {
 						</p>
 					</div>
 
-					{[1, 2, 3, 4].map((c, i) => (
+					{strategy.map((c, i) => (
 						<div
 							key={i}
 							className="flex gap-35 md:gap-63 border-b py-6  w-full">
-							<p className="text-lg font-semibold h-fit">0{c}</p>
+							<p className="text-lg font-semibold h-fit">0{c.id}</p>
 							<div className="flex flex-col gap-2 lg:flex-row lg:gap-8">
 								<p className="font-extrabold text-lg uppercase whitespace-nowrap lg:text-xl">
-									How i solve your challenges
+									{c.heading}
 								</p>
 								<p className=" text-sm ">
-									Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-									Dolore iure libero atque a est possimus dolorum autem
-									molestiae unde optio?
+									{c.desc}
 								</p>
 							</div>
 						</div>
@@ -307,3 +305,27 @@ const MenuList = ({ isActive }) => {
 // 		</div>
 // 	);
 // }
+
+
+const strategy = [
+	{
+		id: 1,
+		heading: "understand the goal or problem",
+		desc: "I ask what's needed, what works, what doesn't, why does it matter. This helps stay on the focused goal.",
+	},
+	{
+		id: 2,
+		heading: "Research and gather information",
+		desc: "Dive into docs, utilize latest and greatest tools to solve the problem.",
+	},
+	{
+		id: 3,
+		heading: "break down and brain storm",
+		desc: "decompose problem into smaller manageable parts,sketch multiple approaches on paper and prioritize",
+	},
+	{
+		id: 4,
+		heading: "implement, test and validate",
+		desc: "code the solution, run unit/integration test, plus manual checks across browsers/devices.",
+	},
+];
