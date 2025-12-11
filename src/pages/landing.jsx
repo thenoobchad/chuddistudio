@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import TextType from "../components/text";
 import { ArrowDown, HandshakeIcon, LocateIcon, Mail } from "lucide-react";
 import { HamburgerMenu } from "../components/hamburger-menu";
 import { ContactForm } from "../components/contact-form";
 import { Footer } from "../components/footer";
+
+import { Carousel } from "../components/carousel";
 
 export default function Landing() {
 	const [isActive, setIsActive] = useState(false);
@@ -29,7 +31,7 @@ export default function Landing() {
 						/>
 
 						<div className="flex flex-col  absolute bottom-15 w-full items-center">
-							<h4 className="text-5xl font-extrabold tracking-tighter   text-zinc-200">
+							<h4 className="text-4xl md:text-6xl font-extrabold tracking-tighter  text-zinc-200 whitespace-nowrap">
 								ELUEME CHIDI OSITA
 							</h4>
 							<TextType
@@ -38,17 +40,17 @@ export default function Landing() {
 								pauseDuration={1500}
 								showCursor={true}
 								cursorCharacter="|"
-								className="text-[18px]! font-extrabold text-center text-zinc-800!"
+								className="text-[24px] md:text-[28px]! font-extrabold text-center text-zinc-800!"
 							/>
 						</div>
 					</div>
 					{/* HERO SECTION */}
-					<div className="flex gap-4 w-full   justify-center">
-						<button className="bg-zinc-100 text-zinc-900 text-lg font-semibold px-6 py-3  flex gap-2 items-center rounded-full">
+					<div className="flex md:flex-row gap-4 w-full justify-center items-center">
+						<button className="bg-zinc-100 text-zinc-900 text-lg w-fit md:w-fit font-semibold px-4 md:px-6 py-3  flex gap-2 items-center whitespace-nowrap rounded-full justify-center">
 							<HandshakeIcon />
 							Lets chat
 						</button>
-						<button className=" rounded-full text-lg  font-bold px-6 py-3 l outline flex gap-2 items-center">
+						<button className="whitespace-nowrap rounded-full text-lg  font-bold px-4 md:px-6 py-3 w-fit md:w-fit outline flex gap-2 items-center justify-center">
 							<a href="/files/henry_cv.pdf" download>
 								Download Resume
 							</a>
@@ -60,14 +62,16 @@ export default function Landing() {
 				<section className=" w-full min-h-screen px-4 pb-10 my-20 flex items-center max-w-5xl h-full mx-auto justify-center">
 					<div className="grid grid-cols-12 grid-rows-7 h-[400px] gap-6">
 						<div className="border-l-4 border-zinc-500 px-5 py-1 col-span-6 row-span-4 flex flex-col justify-between bg-zinc-950 lg:bg-transparent lg:col-span-3">
-							<h4 className="text-7xl font-extrabold">
+							<h4 className="text-4xl md:text-7xl font-extrabold">
 								12<span>+</span>
 							</h4>
-							<p className="font-semibold">Project completed as well as designs</p>
+							<p className="font-semibold">
+								Project completed as well as designs
+							</p>
 						</div>
 
 						<div className="border-l-4 px-5 py-1 col-span-6 row-span-3 flex flex-col justify-between border-zinc-500 bg-zinc-950 lg:col-span-3 lg:bg-transparent">
-							<h4 className="text-[70px] font-extrabold">
+							<h4 className="text-4xl md:text-7xl font-extrabold">
 								3<span>+</span>
 							</h4>
 							<p className="font-semibold">
@@ -79,16 +83,14 @@ export default function Landing() {
 							<h4 className="text-7xl font-extrabold">
 								10<span>+</span>
 							</h4>
-							<p className="font-semibold">
-								Brands Empowered
-							</p>
+							<p className="font-semibold">Brands Empowered</p>
 						</div>
 
 						<div className="border-l-4 px-5 py-1 col-span-6 row-span-3 flex flex-col justify-between border-zinc-500 bg-zinc-950 lg:col-span-3 lg:bg-transparent">
-							<h4 className="text-7xl font-extrabold">
+							<h4 className="text-4xl md:text-7xl font-extrabold">
 								30%<span>+</span>
 							</h4>
-							<p className="font-semibold">
+							<p className="font-semibold text-sm md:text-lg">
 								More Time on Site for Redesigned Pages
 							</p>
 						</div>
@@ -100,9 +102,8 @@ export default function Landing() {
 						<p className="border px-5 py-2 mt-2 rounded-full font-semibold h-fit">
 							Strategy
 						</p>
-						<p className="font-extrabold text-4xl uppercase whitespace-nowrap lg:text-6xl">
+						<p className="font-extrabold text-[21px] uppercase  lg:text-6xl w-full">
 							How i solve your
-							<br />
 							challenges
 						</p>
 					</div>
@@ -110,65 +111,41 @@ export default function Landing() {
 					{strategy.map((c, i) => (
 						<div
 							key={i}
-							className="flex gap-35 md:gap-63 border-b py-6  w-full">
+							className="flex md:flex-row gap-15 md:gap-63 border-b py-6  w-full flex-col">
 							<p className="text-lg font-semibold h-fit">0{c.id}</p>
 							<div className="flex flex-col gap-2 lg:flex-row lg:gap-8">
 								<p className="font-extrabold text-lg uppercase whitespace-nowrap lg:text-xl">
 									{c.heading}
 								</p>
-								<p className=" text-sm ">
-									{c.desc}
-								</p>
+								<p className=" text-sm ">{c.desc}</p>
 							</div>
 						</div>
 					))}
 
 					<div className="my-30 flex justify-center items-center w-full gap-8">
-						<div className="h-10 bg-zinc-50 w-10 rounded-full" />
+						<div className="h-7 bg-zinc-50 w-10 md:w-10 md:h-10 rounded-full " />
 						<p>Turning ideas in smart tools from maximizing potentials</p>
 					</div>
 				</section>
 
 				{/* TESTIMONIALS */}
 
-				<section className=" w-full min-h-screen px-4 py-10 flex items-center max-w-5xl h-full mx-auto justify-start flex-col">
-					<div className="flex gap-10 md:gap-40  pb-10 w-full">
+				<section className=" w-full min-h-screen px-4 py-10 flex items-center max-w-5xl h-full mx-auto justify-start flex-col overflow-x-hidden">
+
+					<div className="flex gap-4 md:gap-10 lg:gap-40  pb-10 w-full">
 						<p className="border px-5 py-2 mt-2 rounded-full font-semibold h-fit">
 							Testimonials
 						</p>
-						<p className="font-extrabold text-4xl uppercase whitespace-nowrap lg:text-6xl">
+						<p className="font-extrabold text-4xl uppercase  lg:text-6xl w-full">
 							What do my
-							<br />
+							
 							clients say?
 						</p>
 					</div>
 
-					<div className="flex gap-6 overflow-hidden scroll-auto">
-						{[1, 2, 3, 4, 5].map((c, i) => (
-							<div
-								key={c + i}
-								className="border-l-4 border-zinc-500 px-5 w-[400px] py-4 flex flex-col gap-6 bg-zinc-950 lg:bg-transparent  ">
-								<h4 className="text-sm">5/5</h4>
-								<p className="text-sm">
-									Lorem ipsum dolor sit amet consectetur adipisicing elit.
-									Adipisci nihil voluptatem officia, libero suscipit porro.
-								</p>
-								<div className="flex items-center gap-2">
-									<img
-										src="dfd"
-										alt=""
-										className="h-7 w-7 bg-white rounded-full"
-									/>
-									<div className="flex flex-col ">
-										<h4 className="text-xs font-semibold">Simon davies</h4>
-										<p className="text-xs">CFO at Logistics</p>
-									</div>
-								</div>
-							</div>
-						))}
-					</div>
+					<Carousel testimonials={testimonials} />
 
-					<div className="mt-30 flex items-center">
+					<div className="mb-10 flex items-center">
 						<p className="h-40 w-40 bg-zinc-200 flex rounded-full justify-center items-center text-zinc-900">
 							Need a <br />
 							website?
@@ -232,7 +209,7 @@ export default function Landing() {
 						<p className="border px-5 py-2 mt-2 rounded-full font-semibold h-fit w-fit">
 							Contact me
 						</p>
-						<p className="flex justify-between items-start gap-10">
+						<p className="flex md:flex-row justify-between items-start gap-4 md:gap-10 flex-col">
 							<span className="font-extrabold text-4xl uppercase whitespace-nowrap lg:text-6xl">
 								Want a meet?
 							</span>
@@ -329,3 +306,49 @@ const strategy = [
 		desc: "code the solution, run unit/integration test, plus manual checks across browsers/devices.",
 	},
 ];
+
+const testimonials = [
+	{
+		id: 1,
+		comment:
+			"This developer's innovative coding solutions streamlined our entire backend process, saving us countless hours.",
+		position: "CTO, Innovatech Solutions",
+		name: "Alex Rivera",
+	},
+	{
+		id: 2,
+		comment:
+			"Exceptional frontend skills that brought our UI designs to life with seamless interactivity and performance.",
+		position: "Product Manager, WebForge Inc.",
+		name: "Jordan Lee",
+	},
+	{
+		id: 3,
+		comment:
+			"A true problem-solver who debugged complex issues in our app, delivering a bug-free release ahead of schedule.",
+		position: "Engineering Lead, CodeCrafters LLC",
+		name: "Taylor Morgan",
+	},
+	{
+		id: 4,
+		comment:
+			"Their expertise in cloud integration transformed our infrastructure, making it scalable and reliable.",
+		position: "VP of Operations, CloudPeak Enterprises",
+		name: "Casey Nguyen",
+	},
+	{
+		id: 5,
+		comment:
+			"Outstanding collaboration on our machine learning project, with clean code and insightful optimizations.",
+		position: "Data Science Director, AI Dynamics",
+		name: "Riley Patel",
+	},
+	{
+		id: 6,
+		comment:
+			"Delivered a robust e-commerce platform that boosted our sales by 30% through efficient database management.",
+		position: "CEO, ShopNet Global",
+		name: "Morgan Ellis",
+	},
+];
+
