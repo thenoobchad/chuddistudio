@@ -7,6 +7,8 @@ import { Footer } from "../components/footer";
 
 import { Carousel } from "../components/carousel";
 
+import { successStories } from "../constants";
+
 export default function Landing() {
 	const [isActive, setIsActive] = useState(false);
 	const [show, setShow] = useState(false);
@@ -98,13 +100,13 @@ export default function Landing() {
 				</section>
 
 				<section className=" w-full min-h-screen px-4 py-10 mt-20 flex items-center max-w-5xl h-full mx-auto justify-start flex-col">
-					<div className="flex gap-10 md:gap-40 border-b pb-10 w-full">
-						<p className="border px-5 py-2 mt-2 rounded-full font-semibold h-fit">
+					<div className="flex flex-col lg:flex-row gap-10 md:gap-20 border-b pb-10 w-full">
+						<p className="border px-5 py-2 mt-2 rounded-full font-semibold w-fit h-fit">
 							Strategy
 						</p>
-						<p className="font-extrabold text-[21px] uppercase  lg:text-6xl w-full">
-							How i solve your
-							challenges
+						<p className="font-extrabold text-4xl uppercase whitespace-nowrap lg:text-6xl w-full text-right">
+							How i solve <br />
+							your challenges
 						</p>
 					</div>
 
@@ -131,15 +133,12 @@ export default function Landing() {
 				{/* TESTIMONIALS */}
 
 				<section className=" w-full min-h-screen px-4 py-10 flex items-center max-w-5xl h-full mx-auto justify-start flex-col overflow-x-hidden">
-
-					<div className="flex gap-4 md:gap-10 lg:gap-40  pb-10 w-full">
-						<p className="border px-5 py-2 mt-2 rounded-full font-semibold h-fit">
+					<div className="flex flex-col lg:flex-row gap-10 md:gap-20 border-b pb-10 w-full">
+						<p className="border px-5 py-2 mt-2 rounded-full font-semibold w-fit h-fit">
 							Testimonials
 						</p>
-						<p className="font-extrabold text-4xl uppercase  lg:text-6xl w-full">
-							What do my
-							
-							clients say?
+						<p className="font-extrabold text-4xl uppercase whitespace-nowrap lg:text-6xl text-right">
+							What do my <br className="" /> clients say?
 						</p>
 					</div>
 
@@ -159,40 +158,41 @@ export default function Landing() {
 				{/* SUCCESS STORIES */}
 
 				<section className=" w-full min-h-screen px-4 py-10 flex items-center max-w-5xl h-full mx-auto justify-start flex-col">
-					<div className="flex flex-col gap-18  border-b pb-10 w-full">
+					<div className="flex flex-col lg:flex-row gap-10 md:gap-20 border-b pb-10 w-full">
 						<p className="border px-5 py-2 mt-2 rounded-full font-semibold h-fit w-fit">
 							Case Studies
 						</p>
-						<p className="font-extrabold text-4xl uppercase whitespace-nowrap lg:text-6xl">
+						<p className="font-extrabold text-4xl uppercase whitespace-nowrap lg:text-6xl text-right">
 							Success stories
 						</p>
 					</div>
 					<div className="w-full">
-						{[1, 2, 3, 4].map((c, i) => {
+						{successStories.map((c, i) => {
 							return (
-								<div key={c + i} className="flex w-full border-b ">
-									<h4 className="h-20 flex items-center justify-start w-1/3 ">
-										<span className="whitespace-nowrap">E-commerce</span>
+								<div key={c + i} className="flex w-full border-b">
+									<h4 className="h-20  items-center justify-start w-1/3 hidden md:flex">
+										<span className="whitespace-nowrap ">{c.type}</span>
 									</h4>
 									<div className="border-l pl-8 w-full">
 										<h3 className="h-20 flex items-center justify-between  whitespace-nowrap  w-full">
-											<span>Technova Solutions</span>
+											<span>{c.name}</span>
 
 											<ArrowDown onClick={() => setShow(!show)} />
 										</h3>
 										{show && (
-											<div className="flex gap-2">
-												{[1, 2, 3].map((c, i) => (
-													<div
-														key={c + i}
-														className="flex flex-col gap-2 pb-10">
-														<h4 className="text-sm">Challenge</h4>
-														<p className="text-xs text-zinc-500">
-															Lorem ipsum dolor sit amet consectetur adipisicing
-															elit.
-														</p>
-													</div>
-												))}
+											<div className="flex  flex-col">
+												<div
+													key={c + i}
+													className="flex flex-col gap-2 pb-10 relative">
+													<h4 className="text-sm absolute p-2 m-1 text-zinc-800 bg-zinc-200">
+														{c.challenge}
+													</h4>
+													<img src={c.image} alt="image" />
+
+													<a href={c.link} className=" py-2 bg-zinc-100 w-fit px-6 text-zinc-900 font-semibold">
+														View Project
+													</a>
+												</div>
 											</div>
 										)}
 									</div>
@@ -205,12 +205,12 @@ export default function Landing() {
 				{/* WHAT TO KNOW */}
 
 				<section className=" w-full  px-4 py-10 flex items-center max-w-5xl h-full mx-auto justify-start flex-col bg-zinc-100 text-zinc-900 lg:rounded-3xl">
-					<div className="flex flex-col gap-18  border-b pb-10 w-full">
+					<div className="flex flex-col lg:flex-row gap-10 md:gap-20 border-b pb-10 w-full">
 						<p className="border px-5 py-2 mt-2 rounded-full font-semibold h-fit w-fit">
 							Contact me
 						</p>
-						<p className="flex md:flex-row justify-between items-start gap-4 md:gap-10 flex-col">
-							<span className="font-extrabold text-4xl uppercase whitespace-nowrap lg:text-6xl">
+						<p className="flex md:flex-row justify-between items-start gap-4 md:gap-10 flex-col text-right w-full">
+							<span className="font-extrabold text-4xl uppercase whitespace-nowrap lg:text-6xl text-right">
 								Want a meet?
 							</span>
 
@@ -351,4 +351,6 @@ const testimonials = [
 		name: "Morgan Ellis",
 	},
 ];
+
+
 

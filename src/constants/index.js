@@ -1,5 +1,7 @@
 
-
+import restaurant from "/images/restaurant.png";
+import zentryclone from "/images/zentryclone.png";
+import chatgptclone from "/images/chatgpt.png";
 
 
 
@@ -322,3 +324,33 @@ const navLinks = [
     techStackImgs,
     navLinks,
   };
+
+  export const successStories = [
+		{
+			id: 1,
+			challenge:
+				"This developer's innovative coding solutions streamlined our entire backend process, saving us countless hours.",
+			image: restaurant,
+			name: "Cook Restaurant",
+			link: "#",
+			type: "Landing Page",
+		},
+		{
+			id: 2,
+			challenge:
+				"This developer's innovative coding solutions streamlined our entire backend process, saving us countless hours.",
+			image: zentryclone,
+			name: "Zentry Clone",
+			link: "#",
+			type: "Zentry Page",
+		},
+		{
+			id: 3,
+			challenge:
+				"This developer's innovative coding solutions streamlined our entire backend process, saving us countless hours.",
+			image: chatgptclone,
+			name: "Chat GPT",
+			link: "#",
+			type: "AI Page",
+		},
+	];
