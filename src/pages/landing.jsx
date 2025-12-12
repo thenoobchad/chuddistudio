@@ -20,7 +20,7 @@ export default function Landing() {
 				<div className="w-full max-w-5xl h-full mx-auto px-4 py-4 justify-center">
 					{/* Navbar */}
 					<div className="w-full flex justify-end rounded max-w-5xl mx-auto relative top-1 right-2 ">
-						<span className="bg-zinc-900   fixed z-70">
+						<span className="bg-zinc-900 fixed z-70 right-1">
 							<HamburgerMenu setIsActive={setIsActive} isActive={isActive} />
 						</span>
 					</div>
@@ -137,7 +137,7 @@ export default function Landing() {
 						<p className="border px-5 py-2 mt-2 rounded-full font-semibold w-fit h-fit">
 							Testimonials
 						</p>
-						<p className="font-extrabold text-4xl uppercase whitespace-nowrap lg:text-6xl text-right">
+						<p className="font-extrabold text-4xl uppercase whitespace-nowrap lg:text-6xl w-full text-right">
 							What do my <br className="" /> clients say?
 						</p>
 					</div>
@@ -159,10 +159,10 @@ export default function Landing() {
 
 				<section className=" w-full min-h-screen px-4 py-10 flex items-center max-w-5xl h-full mx-auto justify-start flex-col">
 					<div className="flex flex-col lg:flex-row gap-10 md:gap-20 border-b pb-10 w-full">
-						<p className="border px-5 py-2 mt-2 rounded-full font-semibold h-fit w-fit">
+						<p className="border px-5 py-2 mt-2 rounded-full font-semibold h-fit w-fit whitespace-nowrap">
 							Case Studies
 						</p>
-						<p className="font-extrabold text-4xl uppercase whitespace-nowrap lg:text-6xl text-right">
+						<p className="font-extrabold text-4xl uppercase whitespace-nowrap lg:text-6xl w-full text-right">
 							Success stories
 						</p>
 					</div>
@@ -183,13 +183,13 @@ export default function Landing() {
 											<div className="flex  flex-col">
 												<div
 													key={c + i}
-													className="flex flex-col gap-2 pb-10 relative">
-													<h4 className="text-sm absolute p-2 m-1 text-zinc-800 bg-zinc-200">
-														{c.challenge}
-													</h4>
+													className="flex flex-col gap-3 pb-10 relative">
+													<h4 className="text-sm ">{c.challenge}</h4>
 													<img src={c.image} alt="image" />
 
-													<a href={c.link} className=" py-2 bg-zinc-100 w-fit px-6 text-zinc-900 font-semibold">
+													<a
+														href={c.link}
+														className=" py-2 bg-zinc-100 w-fit px-6 text-zinc-900 font-semibold rounded-full mt-2">
 														View Project
 													</a>
 												</div>
@@ -206,7 +206,7 @@ export default function Landing() {
 
 				<section className=" w-full  px-4 py-10 flex items-center max-w-5xl h-full mx-auto justify-start flex-col bg-zinc-100 text-zinc-900 lg:rounded-3xl">
 					<div className="flex flex-col lg:flex-row gap-10 md:gap-20 border-b pb-10 w-full">
-						<p className="border px-5 py-2 mt-2 rounded-full font-semibold h-fit w-fit">
+						<p className="border px-5 py-2 mt-2 rounded-full font-semibold h-fit w-fit whitespace-nowrap">
 							Contact me
 						</p>
 						<p className="flex md:flex-row justify-between items-start gap-4 md:gap-10 flex-col text-right w-full">
@@ -254,12 +254,12 @@ const MenuList = ({ isActive }) => {
 				{["stats", "projects", "contact", "skills"].map((c, i) => (
 					<p
 						key={c + i}
-						className="text-5xl md:text-7xl uppercase font-bold px-20 border-b hover:cursor-pointer border-zinc-800 pb-4">
+						className="text-4xl md:text-7xl uppercase font-bold px-8 md:px-20 border-b hover:cursor-pointer border-zinc-800 pb-4">
 						{c}
 					</p>
 				))}
 				<div>
-					<p className="px-20">
+					<p className="px-8 md:px-20">
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
 						adipisci laborum velit aspernatur debitis odio inventore neque?
 						Deserunt, facere dolorem?
