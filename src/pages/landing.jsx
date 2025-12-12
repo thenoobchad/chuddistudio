@@ -259,10 +259,8 @@ const MenuList = ({ isActive }) => {
 					</p>
 				))}
 				<div>
-					<p className="px-8 md:px-20">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
-						adipisci laborum velit aspernatur debitis odio inventore neque?
-						Deserunt, facere dolorem?
+					<p className="px-8 md:px-20 text-3xl">
+						[facebook] [instagram] [x.com] [discord]
 					</p>
 				</div>
 			</div>
@@ -298,28 +296,22 @@ const strategy = [
 	{
 		id: 3,
 		heading: "break down and brain storm",
-		desc: "decompose problem into smaller manageable parts,sketch multiple approaches on paper and prioritize",
+		desc: "Decompose problem into smaller manageable parts,sketch multiple approaches on paper and prioritize",
 	},
 	{
 		id: 4,
 		heading: "implement, test and validate",
-		desc: "code the solution, run unit/integration test, plus manual checks across browsers/devices.",
+		desc: "Code the solution, run unit/integration test, plus manual checks across browsers/devices.",
 	},
 ];
 
 const testimonials = [
 	{
-		id: 1,
-		comment:
-			"This developer's innovative coding solutions streamlined our entire backend process, saving us countless hours.",
-		position: "CTO, Innovatech Solutions",
-		name: "Alex Rivera",
-	},
-	{
 		id: 2,
 		comment:
 			"Exceptional frontend skills that brought our UI designs to life with seamless interactivity and performance.",
 		position: "Product Manager, WebForge Inc.",
+		score: 4.5,
 		name: "Jordan Lee",
 	},
 	{
@@ -327,6 +319,7 @@ const testimonials = [
 		comment:
 			"A true problem-solver who debugged complex issues in our app, delivering a bug-free release ahead of schedule.",
 		position: "Engineering Lead, CodeCrafters LLC",
+		score: 4.6,
 		name: "Taylor Morgan",
 	},
 	{
@@ -334,13 +327,16 @@ const testimonials = [
 		comment:
 			"Their expertise in cloud integration transformed our infrastructure, making it scalable and reliable.",
 		position: "VP of Operations, CloudPeak Enterprises",
+		score: 4.2,
 		name: "Casey Nguyen",
 	},
+
 	{
 		id: 5,
 		comment:
 			"Outstanding collaboration on our machine learning project, with clean code and insightful optimizations.",
 		position: "Data Science Director, AI Dynamics",
+		score: 4.1,
 		name: "Riley Patel",
 	},
 	{
@@ -348,6 +344,7 @@ const testimonials = [
 		comment:
 			"Delivered a robust e-commerce platform that boosted our sales by 30% through efficient database management.",
 		position: "CEO, ShopNet Global",
+		score: 4.4,
 		name: "Morgan Ellis",
 	},
 ];

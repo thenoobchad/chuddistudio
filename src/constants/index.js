@@ -329,16 +329,16 @@ const navLinks = [
 		{
 			id: 1,
 			challenge:
-				"This developer's innovative coding solutions streamlined our entire backend process, saving us countless hours.",
+				"Built an attractive landing page for a foreign client.",
 			image: restaurant,
-			name: "Cook Restaurant",
+			name: "Gericht Restaurant",
 			link: "#",
 			type: "Landing Page",
 		},
 		{
 			id: 2,
 			challenge:
-				"This developer's innovative coding solutions streamlined our entire backend process, saving us countless hours.",
+				"A gaming page experience similar to zentry landing page.",
 			image: zentryclone,
 			name: "Zentry Clone",
 			link: "#",
@@ -347,7 +347,7 @@ const navLinks = [
 		{
 			id: 3,
 			challenge:
-				"This developer's innovative coding solutions streamlined our entire backend process, saving us countless hours.",
+				"The famous chat gpt3 page cloned.",
 			image: chatgptclone,
 			name: "Chat GPT",
 			link: "#",

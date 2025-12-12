@@ -52,3 +52,18 @@ section {
 }
 
 
+.slick-dots li button:before {
+  @apply text-blue-400 text-4xl opacity-75 z-10 bg-red-700 h-[20px] w-[20px]
+}
+
+.slick-dots li button:after{
+  @apply text-blue-400 text-4xl opacity-75 z-10 bg-red-700 h-[20px] w-[20px]
+}
+
+.slick-dots li.slick-active button:before {
+  @apply text-red-400 text-4xl opacity-75
+}
+
+.slick-dots li {
+  @apply mx-1
+}
