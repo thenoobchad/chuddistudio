@@ -22,8 +22,7 @@ export const Footer = () => {
           
           
           <TiSocialTwitter className="w-6 h-6" />
-          <TiSocialDribbble className="w-6 h-6" />
-          
+         
           <TiSocialFacebook className="w-6 h-6"/>
         </div>
       </div>

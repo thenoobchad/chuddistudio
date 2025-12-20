@@ -37,7 +37,7 @@ export default function Home() {
 
 						<div className="flex flex-col  absolute bottom-15 w-full items-center">
 							<h4 className="text-4xl md:text-6xl font-extrabold tracking-tighter  text-zinc-200 whitespace-nowrap">
-								ELUEME CHIDI OSITA
+								CHIDI OSITA ELUEME
 							</h4>
 							<TextType
 								text={["Full Stack Developer...", "Digital Marketer . . . "]}
@@ -70,7 +70,7 @@ export default function Home() {
 							<h4 className="text-4xl md:text-7xl font-extrabold">
 								12<span>+</span>
 							</h4>
-							<p className="font-semibold">
+							<p className="font-semibold text-zinc-400">
 								Project Completed as well as Designs
 							</p>
 						</div>
@@ -79,7 +79,7 @@ export default function Home() {
 							<h4 className="text-4xl md:text-7xl font-extrabold">
 								3<span>+</span>
 							</h4>
-							<p className="font-semibold">
+							<p className="font-semibold text-zinc-400">
 								Years of Crafting Digital Experiences
 							</p>
 						</div>
@@ -88,14 +88,14 @@ export default function Home() {
 							<h4 className="text-7xl font-extrabold">
 								10<span>+</span>
 							</h4>
-							<p className="font-semibold">Brands Empowered</p>
+							<p className="font-semibold text-zinc-400">Brands Empowered</p>
 						</div>
 
 						<div className="border-l-4 px-5 py-1 col-span-6 row-span-3 flex flex-col justify-between border-zinc-500 bg-zinc-950 lg:col-span-3 lg:bg-transparent">
 							<h4 className="text-4xl md:text-7xl font-extrabold">
 								30%<span>+</span>
 							</h4>
-							<p className="font-semibold text-sm md:text-lg">
+							<p className="font-semibold text-sm md:text-lg text-zinc-400">
 								More Time on Site for Redesigned Pages
 							</p>
 						</div>
@@ -122,7 +122,7 @@ export default function Home() {
 								<p className="font-extrabold text-lg uppercase whitespace-nowrap lg:text-xl">
 									{c.heading}
 								</p>
-								<p className=" text-sm ">{c.desc}</p>
+								<p className=" text-sm text-zinc-400">{c.desc}</p>
 							</div>
 						</div>
 					))}
@@ -179,7 +179,7 @@ export default function Home() {
 
 				<Motion.section
 					initial={{ backgroundColor: "black", opacity: 0 }}
-					whileInView={{ backgroundColor: "white", opacity: 1 }}
+					whileInView={{ backgroundColor: "white", opacity: 0.96 }}
 					className=" w-full  px-4 py-10 flex items-center max-w-5xl h-full mx-auto justify-start flex-col bg-zinc-100 text-zinc-900 lg:rounded-3xl">
 					<div className="flex flex-col lg:flex-row gap-10 md:gap-20 border-b pb-10 w-full">
 						<p className="border px-5 py-2 mt-2 rounded-full font-semibold h-fit w-fit whitespace-nowrap">

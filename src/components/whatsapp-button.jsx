@@ -25,7 +25,7 @@ export const WhatsappButton = () => {
           }}
           className="fixed"
       onMouseEnter={e => {
-          e.currentTarget.style.transform = "scale(1)";
+          e.currentTarget.style.transform = "scale(1.1)";
       }}
       onMouseLeave={e => {
           e.currentTarget.style.transform = "scale(1)";
