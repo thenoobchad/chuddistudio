@@ -328,29 +328,29 @@ const navLinks = [
   export const successStories = [
 		{
 			id: 1,
-			challenge:
-				"Built an attractive landing page for a foreign client.",
+			challenge: "Built an attractive landing page for a foreign client.",
 			image: restaurant,
 			name: "Gericht Restaurant",
 			link: "#",
 			type: "Landing Page",
+			active: false,
 		},
 		{
 			id: 2,
-			challenge:
-				"A gaming page experience similar to zentry landing page.",
+			challenge: "A gaming page experience similar to zentry landing page.",
 			image: zentryclone,
 			name: "Zentry Clone",
 			link: "#",
 			type: "Zentry Page",
+			active: false,
 		},
 		{
 			id: 3,
-			challenge:
-				"The famous chat gpt3 page cloned.",
+			challenge: "The famous chat gpt3 page cloned.",
 			image: chatgptclone,
 			name: "Chat GPT",
 			link: "#",
 			type: "AI Page",
+			active: false,
 		},
 	];

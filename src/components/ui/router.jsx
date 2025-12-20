@@ -1,13 +1,11 @@
 import  {Routes, Route} from 'react-router-dom';
-import Home from '../../pages/home';
-import Landing from '../../pages/landing';
+import Home from '../../pages/Home';
+
 
 export default function Router() {
-  return (
+	return (
 		<Routes>
-			<Route path="/home" element={<Home />} />
-
-			<Route path="/" element={<Landing />} />
+			<Route path="/" element={<Home />} />
 		</Routes>
 	);
 }

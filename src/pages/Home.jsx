@@ -1,6 +1,6 @@
-import  { useState } from "react";
+import { useState } from "react";
 import TextType from "../components/text";
-import { ArrowDown, HandshakeIcon, LocateIcon, Mail } from "lucide-react";
+import { HandshakeIcon, LocateIcon, Mail } from "lucide-react";
 import { HamburgerMenu } from "../components/hamburger-menu";
 import { ContactForm } from "../components/contact-form";
 import { Footer } from "../components/footer";
@@ -9,9 +9,12 @@ import { Carousel } from "../components/carousel";
 
 import { successStories } from "../constants";
 
-export default function Landing() {
+import {  motion } from "motion/react";
+
+export default function Home() {
+
+	const Motion = motion;
 	const [isActive, setIsActive] = useState(false);
-	const [show, setShow] = useState(false);
 
 	return (
 		<>
@@ -37,12 +40,12 @@ export default function Landing() {
 								ELUEME CHIDI OSITA
 							</h4>
 							<TextType
-								text={["Full Stack Developer...", "Software Engineer . . . "]}
+								text={["Full Stack Developer...", "Digital Marketer . . . "]}
 								typingSpeed={75}
 								pauseDuration={1500}
 								showCursor={true}
 								cursorCharacter="|"
-								className="text-[24px] md:text-[28px]! font-extrabold text-center text-zinc-800!"
+								className="text-[20px] md:text-[24px]! font-extrabold text-center !text-zinc-900"
 							/>
 						</div>
 					</div>
@@ -61,14 +64,14 @@ export default function Landing() {
 				</div>
 
 				{/* STATS SECTION */}
-				<section className=" w-full min-h-screen px-4 pb-10 my-20 flex items-center max-w-5xl h-full mx-auto justify-center">
+				<section className=" w-full h-full px-4 pb-8 mt-25 flex items-center max-w-5xl  mx-auto justify-center">
 					<div className="grid grid-cols-12 grid-rows-7 h-[400px] gap-6">
 						<div className="border-l-4 border-zinc-500 px-5 py-1 col-span-6 row-span-4 flex flex-col justify-between bg-zinc-950 lg:bg-transparent lg:col-span-3">
 							<h4 className="text-4xl md:text-7xl font-extrabold">
 								12<span>+</span>
 							</h4>
 							<p className="font-semibold">
-								Project completed as well as designs
+								Project Completed as well as Designs
 							</p>
 						</div>
 
@@ -99,7 +102,7 @@ export default function Landing() {
 					</div>
 				</section>
 
-				<section className=" w-full min-h-screen px-4 py-10 mt-20 flex items-center max-w-5xl h-full mx-auto justify-start flex-col">
+				<section className=" w-full px-4 py-10 mt-20 flex items-center max-w-5xl h-full mx-auto justify-start flex-col">
 					<div className="flex flex-col lg:flex-row gap-10 md:gap-20 border-b pb-10 w-full">
 						<p className="border px-5 py-2 mt-2 rounded-full font-semibold w-fit h-fit">
 							Strategy
@@ -132,7 +135,7 @@ export default function Landing() {
 
 				{/* TESTIMONIALS */}
 
-				<section className=" w-full min-h-screen px-4 py-10 flex items-center max-w-5xl h-full mx-auto justify-start flex-col overflow-x-hidden">
+				<section className=" w-full  px-4 py-10 flex items-center max-w-5xl h-full mx-auto justify-start flex-col">
 					<div className="flex flex-col lg:flex-row gap-10 md:gap-20 border-b pb-10 w-full">
 						<p className="border px-5 py-2 mt-2 rounded-full font-semibold w-fit h-fit">
 							Testimonials
@@ -141,7 +144,6 @@ export default function Landing() {
 							What do my <br className="" /> clients say?
 						</p>
 					</div>
-
 					<Carousel testimonials={testimonials} />
 
 					<div className="mb-10 flex items-center">
@@ -166,45 +168,19 @@ export default function Landing() {
 							Success stories
 						</p>
 					</div>
-					<div className="w-full">
+					<div className="w-full flex flex-col  my-20 gap-20">
 						{successStories.map((c, i) => {
-							return (
-								<div key={c + i} className="flex w-full border-b">
-									<h4 className="h-20  items-center justify-start w-1/3 hidden md:flex">
-										<span className="whitespace-nowrap ">{c.type}</span>
-									</h4>
-									<div className="border-l pl-8 w-full">
-										<h3 className="h-20 flex items-center justify-between  whitespace-nowrap  w-full">
-											<span>{c.name}</span>
-
-											<ArrowDown onClick={() => setShow(!show)} />
-										</h3>
-										{show && (
-											<div className="flex  flex-col">
-												<div
-													key={c + i}
-													className="flex flex-col gap-3 pb-10 relative">
-													<h4 className="text-sm ">{c.challenge}</h4>
-													<img src={c.image} alt="image" />
-
-													<a
-														href={c.link}
-														className=" py-2 bg-zinc-100 w-fit px-6 text-zinc-900 font-semibold rounded-full mt-2">
-														View Project
-													</a>
-												</div>
-											</div>
-										)}
-									</div>
-								</div>
-							);
+							return <Item key={i} data={c} />;
 						})}
 					</div>
 				</section>
 
 				{/* WHAT TO KNOW */}
 
-				<section className=" w-full  px-4 py-10 flex items-center max-w-5xl h-full mx-auto justify-start flex-col bg-zinc-100 text-zinc-900 lg:rounded-3xl">
+				<Motion.section
+					initial={{ backgroundColor: "black", opacity: 0 }}
+					whileInView={{ backgroundColor: "white", opacity: 1 }}
+					className=" w-full  px-4 py-10 flex items-center max-w-5xl h-full mx-auto justify-start flex-col bg-zinc-100 text-zinc-900 lg:rounded-3xl">
 					<div className="flex flex-col lg:flex-row gap-10 md:gap-20 border-b pb-10 w-full">
 						<p className="border px-5 py-2 mt-2 rounded-full font-semibold h-fit w-fit whitespace-nowrap">
 							Contact me
@@ -234,7 +210,7 @@ export default function Landing() {
 						</ul>
 					</div>
 					<ContactForm />
-				</section>
+				</Motion.section>
 				<Footer />
 			</main>
 		</>
@@ -242,6 +218,7 @@ export default function Landing() {
 }
 
 const MenuList = ({ isActive }) => {
+	
 	return (
 		<div
 			className={`${
@@ -259,8 +236,8 @@ const MenuList = ({ isActive }) => {
 					</p>
 				))}
 				<div>
-					<p className="px-8 md:px-20 text-3xl">
-						[facebook] [instagram] [x.com] [discord]
+					<p className="px-8 md:px-20 text-3xl flex">
+						[facebook] [instagram] [discord]
 					</p>
 				</div>
 			</div>
@@ -280,7 +257,6 @@ const MenuList = ({ isActive }) => {
 // 		</div>
 // 	);
 // }
-
 
 const strategy = [
 	{
@@ -349,5 +325,32 @@ const testimonials = [
 	},
 ];
 
+const Item = ({ data }) => {
+	const Motion = motion;
+	const [isExpand, setIsExpand] = useState(false);
 
+	const handleClick = () => {
+		setIsExpand(!isExpand);
+	};
 
+	return (
+		<Motion.div
+			whileHover={{ scale: 0.95 }}
+			whileTap={{ scale: 0.95 }}
+			onClick={handleClick}>
+			<div className="flex relative">
+				<img src={data.image} alt="image" className="h-full" />
+				{isExpand && (
+					<div className="absolute op-0 right-0 w-full h-full z-10 bg-zinc-900/50 flex flex-col md:flex-row justify-center items-center gap-4 lg:flex-col ">
+						<button className="bg-zinc-100 text-zinc-900 text-md w-fit  font-semibold px-4 py-3  flex gap-2 items-center whitespace-nowrap rounded-full ">
+							Go to Website
+						</button>
+						<button className="border-2 border-zinc-100 text-zinc-100 text-md w-fit  font-semibold px-4 py-3  flex gap-2 items-center whitespace-nowrap rounded-full ">
+							View Git Code
+						</button>
+					</div>
+				)}
+			</div>
+		</Motion.div>
+	);
+};
