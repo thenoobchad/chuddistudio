@@ -49,7 +49,9 @@ export default function Home() {
 					</div>
 					{/* HERO SECTION */}
 					<div className="flex md:flex-row gap-4 w-full justify-center items-center">
-						<a href="tel:+234-806-815-6622" className="bg-zinc-200 text-zinc-900 text-lg w-fit md:w-fit font-semibold px-4 md:px-6 py-3  flex gap-2 items-center whitespace-nowrap rounded-full justify-center">
+						<a
+							href="tel:+234-806-815-6622"
+							className="bg-zinc-200 text-zinc-900 text-lg w-fit md:w-fit font-semibold px-4 md:px-6 py-3  flex gap-2 items-center whitespace-nowrap rounded-full justify-center">
 							<HandshakeIcon />
 							Lets chat
 						</a>
@@ -127,7 +129,12 @@ export default function Home() {
 
 					<div className="my-30 flex justify-center items-center w-full gap-8">
 						<div className="h-7 bg-zinc-50 w-10 md:w-10 md:h-10 rounded-full " />
-						<p>Turning ideas into smart tools for maximizing potentials</p>
+						<p>
+							Turning <span className="italic text-[#0947e2]">Ideas</span> into
+							smart tools for{" "}
+							<span className="text-[#0947e2] italic">Maximizing</span>{" "}
+							potentials
+						</p>
 					</div>
 				</section>
 
