@@ -6,13 +6,13 @@ const USER_ID = import.meta.env.VITE_USER_ID;
 
 export const sendEmail = async (formRef) => {
 	try {
-		const res = await emailjs.sendForm(
+		    await emailjs.sendForm(
 			SERVICE_ID,
 			TEMPLATE_ID,
 			formRef.current,
 			USER_ID
 		);
-		return { success: true, message: "Email sent successfully", res };
+		return { success: true, message: "Email sent successfully" };
 	} catch (error) {
 		console.error("Error sending email:", error);
 		return { success: false, message: "Error sending email", error };

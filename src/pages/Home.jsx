@@ -268,9 +268,9 @@ const Item = ({ data }) => {
 				<img src={data.image} alt="image" className="h-full" />
 				{isExpand && (
 					<div className="absolute op-0 right-0 w-full h-full z-10 bg-zinc-900/50 flex flex-col md:flex-row justify-center items-center gap-4 lg:flex-col ">
-						<button className="bg-zinc-200 text-zinc-900 text-md w-fit  font-semibold px-4 py-3  flex gap-2 items-center whitespace-nowrap rounded-full ">
+						<a href={data.website} className="bg-zinc-200 text-zinc-900 text-md w-fit  font-semibold px-4 py-3  flex gap-2 items-center whitespace-nowrap rounded-full ">
 							Go to Website
-						</button>
+						</a>
 						<button className="border-2 border-zinc-100 text-zinc-100 text-md w-fit  font-semibold px-4 py-3  flex gap-2 items-center whitespace-nowrap rounded-full ">
 							View Git Code
 						</button>

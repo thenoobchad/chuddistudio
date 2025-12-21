@@ -4,7 +4,7 @@ import { sendEmail } from "../lib/emailjs";
 
 export const ContactForm = () => {
 	const formRef = useRef(null);
-	const [status, setStatus] = useState('');
+	const [status, setStatus] = useState(null);
 
 	
 

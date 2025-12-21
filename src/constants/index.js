@@ -97,7 +97,7 @@ export const successStories = [
 		name: "Gericht Restaurant",
 		link: "#",
 		type: "Landing Page",
-		active: false,
+		website: "https://mealtosh.netlify.app",
 	},
 	{
 		id: 2,
@@ -106,7 +106,7 @@ export const successStories = [
 		name: "Zentry Clone",
 		link: "#",
 		type: "Zentry Page",
-		active: false,
+		website: "https://zentry-mu-seven.vercel.app/",
 	},
 	{
 		id: 3,
@@ -115,7 +115,7 @@ export const successStories = [
 		name: "Chat GPT",
 		link: "#",
 		type: "AI Page",
-		active: false,
+		website: "https://gpt3page.netlify.app",
 	},
 ];
 
