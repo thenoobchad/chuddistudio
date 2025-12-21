@@ -1,15 +1,13 @@
 import { useState } from "react";
-import TextType from "../components/text";
+import { TextType, ContactForm, Carousel, HamburgerMenu } from "../components";
 import { HandshakeIcon, LocateIcon, Mail } from "lucide-react";
-import { HamburgerMenu } from "../components/hamburger-menu";
-import { ContactForm } from "../components/contact-form";
-import { Footer } from "../components/footer";
 
-import { Carousel } from "../components/carousel";
+import { Footer } from "../components/ui/footer";
 
-import { successStories } from "../constants";
 
-import {  motion } from "motion/react";
+import { strategy, successStories, testimonials } from "../constants";
+
+import { motion } from "motion/react";
 
 export default function Home() {
 
@@ -51,12 +49,12 @@ export default function Home() {
 					</div>
 					{/* HERO SECTION */}
 					<div className="flex md:flex-row gap-4 w-full justify-center items-center">
-						<button className="bg-zinc-100 text-zinc-900 text-lg w-fit md:w-fit font-semibold px-4 md:px-6 py-3  flex gap-2 items-center whitespace-nowrap rounded-full justify-center">
+						<a href="tel:+234-806-815-6622" className="bg-zinc-200 text-zinc-900 text-lg w-fit md:w-fit font-semibold px-4 md:px-6 py-3  flex gap-2 items-center whitespace-nowrap rounded-full justify-center">
 							<HandshakeIcon />
 							Lets chat
-						</button>
-						<button className="whitespace-nowrap rounded-full text-lg  font-bold px-4 md:px-6 py-3 w-fit md:w-fit outline flex gap-2 items-center justify-center">
-							<a href="/files/henry_cv.pdf" download>
+						</a>
+						<button className="whitespace-nowrap rounded-full text-lg  font-bold px-4 md:px-6 py-3 w-fit md:w-fit outline flex gap-2 items-center justify-center text-zinc-200  outline-zinc-200">
+							<a href="/files/chidi_henry_osita.pdf" download>
 								Download Resume
 							</a>
 						</button>
@@ -67,35 +65,35 @@ export default function Home() {
 				<section className=" w-full h-full px-4 pb-8 mt-25 flex items-center max-w-5xl  mx-auto justify-center">
 					<div className="grid grid-cols-12 grid-rows-7 h-[400px] gap-6">
 						<div className="border-l-4 border-zinc-500 px-5 py-1 col-span-6 row-span-4 flex flex-col justify-between bg-zinc-950 lg:bg-transparent lg:col-span-3">
-							<h4 className="text-4xl md:text-7xl font-extrabold">
+							<h4 className="text-4xl md:text-7xl font-extrabold text-zinc-200 ">
 								12<span>+</span>
 							</h4>
-							<p className="font-semibold text-zinc-400">
+							<p className="font-semibold text-zinc-500">
 								Project Completed as well as Designs
 							</p>
 						</div>
 
 						<div className="border-l-4 px-5 py-1 col-span-6 row-span-3 flex flex-col justify-between border-zinc-500 bg-zinc-950 lg:col-span-3 lg:bg-transparent">
-							<h4 className="text-4xl md:text-7xl font-extrabold">
+							<h4 className="text-4xl md:text-7xl font-extrabold text-zinc-200 ">
 								3<span>+</span>
 							</h4>
-							<p className="font-semibold text-zinc-400">
+							<p className="font-semibold text-zinc-500">
 								Years of Crafting Digital Experiences
 							</p>
 						</div>
 
 						<div className="border-l-4 px-5 py-1 col-span-6 row-span-4 flex flex-col justify-between border-zinc-500 bg-zinc-950 lg:col-span-3 lg:bg-transparent">
-							<h4 className="text-7xl font-extrabold">
+							<h4 className="text-7xl font-extrabold text-zinc-200 ">
 								10<span>+</span>
 							</h4>
-							<p className="font-semibold text-zinc-400">Brands Empowered</p>
+							<p className="font-semibold text-zinc-500">Brands Empowered</p>
 						</div>
 
 						<div className="border-l-4 px-5 py-1 col-span-6 row-span-3 flex flex-col justify-between border-zinc-500 bg-zinc-950 lg:col-span-3 lg:bg-transparent">
-							<h4 className="text-4xl md:text-7xl font-extrabold">
+							<h4 className="text-4xl md:text-7xl font-extrabold text-zinc-200 ">
 								30%<span>+</span>
 							</h4>
-							<p className="font-semibold text-sm md:text-lg text-zinc-400">
+							<p className="font-semibold text-sm md:text-lg text-zinc-500">
 								More Time on Site for Redesigned Pages
 							</p>
 						</div>
@@ -104,11 +102,11 @@ export default function Home() {
 
 				<section className=" w-full px-4 py-10 mt-20 flex items-center max-w-5xl h-full mx-auto justify-start flex-col">
 					<div className="flex flex-col lg:flex-row gap-10 md:gap-20 border-b pb-10 w-full">
-						<p className="border px-5 py-2 mt-2 rounded-full font-semibold w-fit h-fit">
+						<p className="border border-zinc-200 px-5 py-2 mt-2 rounded-full font-semibold w-fit h-fit text-zinc-200 ">
 							Strategy
 						</p>
-						<p className="font-extrabold text-4xl uppercase whitespace-nowrap lg:text-6xl w-full text-right">
-							How i solve <br />
+						<p className="font-extrabold text-4xl uppercase whitespace-nowrap lg:text-6xl w-full text-right text-zinc-200 ">
+							How i <span className="italic text-[#0947e2]">solve</span> <br />
 							your challenges
 						</p>
 					</div>
@@ -119,17 +117,17 @@ export default function Home() {
 							className="flex md:flex-row gap-15 md:gap-63 border-b py-6  w-full flex-col">
 							<p className="text-lg font-semibold h-fit">0{c.id}</p>
 							<div className="flex flex-col gap-2 lg:flex-row lg:gap-8">
-								<p className="font-extrabold text-lg uppercase whitespace-nowrap lg:text-xl">
+								<p className="font-extrabold text-lg uppercase whitespace-nowrap lg:text-xl text-zinc-200 ">
 									{c.heading}
 								</p>
-								<p className=" text-sm text-zinc-400">{c.desc}</p>
+								<p className=" text-sm text-zinc-500">{c.desc}</p>
 							</div>
 						</div>
 					))}
 
 					<div className="my-30 flex justify-center items-center w-full gap-8">
 						<div className="h-7 bg-zinc-50 w-10 md:w-10 md:h-10 rounded-full " />
-						<p>Turning ideas in smart tools from maximizing potentials</p>
+						<p>Turning ideas into smart tools for maximizing potentials</p>
 					</div>
 				</section>
 
@@ -137,11 +135,12 @@ export default function Home() {
 
 				<section className=" w-full  px-4 py-10 flex items-center max-w-5xl h-full mx-auto justify-start flex-col">
 					<div className="flex flex-col lg:flex-row gap-10 md:gap-20 border-b pb-10 w-full">
-						<p className="border px-5 py-2 mt-2 rounded-full font-semibold w-fit h-fit">
+						<p className="border border-zinc-200 px-5 py-2 mt-2 rounded-full font-semibold w-fit h-fit text-zinc-200">
 							Testimonials
 						</p>
-						<p className="font-extrabold text-4xl uppercase whitespace-nowrap lg:text-6xl w-full text-right">
-							What do my <br className="" /> clients say?
+						<p className="font-extrabold text-4xl uppercase whitespace-nowrap lg:text-6xl w-full text-right text-zinc-200">
+							What do my <br />{" "}
+							<span className="italic text-[#0947e2]">clients</span> say?
 						</p>
 					</div>
 					<Carousel testimonials={testimonials} />
@@ -165,7 +164,7 @@ export default function Home() {
 							Case Studies
 						</p>
 						<p className="font-extrabold text-4xl uppercase whitespace-nowrap lg:text-6xl w-full text-right">
-							Success stories
+							Success <span className="italic text-[#0947e2]">stories</span>
 						</p>
 					</div>
 					<div className="w-full flex flex-col  my-20 gap-20">
@@ -180,17 +179,17 @@ export default function Home() {
 				<Motion.section
 					initial={{ backgroundColor: "black", opacity: 0 }}
 					whileInView={{ backgroundColor: "white", opacity: 0.96 }}
-					className=" w-full  px-4 py-10 flex items-center max-w-5xl h-full mx-auto justify-start flex-col bg-zinc-100 text-zinc-900 lg:rounded-3xl">
+					className=" w-full  px-4 py-10 flex items-center max-w-5xl h-full mx-auto justify-start flex-col bg-zinc-200  text-zinc-600 lg:rounded-3xl">
 					<div className="flex flex-col lg:flex-row gap-10 md:gap-20 border-b pb-10 w-full">
-						<p className="border px-5 py-2 mt-2 rounded-full font-semibold h-fit w-fit whitespace-nowrap">
+						<p className="border px-5 py-2 mt-2 rounded-full font-semibold h-fit w-fit whitespace-nowrap text-zinc-600 ">
 							Contact me
 						</p>
 						<p className="flex md:flex-row justify-between items-start gap-4 md:gap-10 flex-col text-right w-full">
-							<span className="font-extrabold text-4xl uppercase whitespace-nowrap lg:text-6xl text-right">
-								Want a meet?
+							<span className="font-extrabold text-4xl uppercase whitespace-nowrap lg:text-6xl text-right text-zinc-600 ">
+								Want to <span className="italic text-[#0947e2]">meet?</span>
 							</span>
 
-							<span className="text-xs">
+							<span className="text-xs text-zinc-600 ">
 								I'm here to help you unlock market possibilities and drive
 								growth. Reach out today to discus your goals and challenges and
 								explore tailored solutions.{" "}
@@ -245,86 +244,6 @@ const MenuList = ({ isActive }) => {
 	);
 };
 
-// const StatCard = ({number, desc}) => {
-// 	return (
-// 		<div className="border-l-4 px-5 py-1 col-span-6 row-span-3 flex flex-col justify-between border-zinc-500 bg-zinc-950 md:col-span-4">
-// 			<h4 className="text-7xl">
-// 				600<span>+</span>
-// 			</h4>
-// 			<p className="font-semibold">
-// 				Hours of Financial advisory and strategic work
-// 			</p>
-// 		</div>
-// 	);
-// }
-
-const strategy = [
-	{
-		id: 1,
-		heading: "understand the goal or problem",
-		desc: "I ask what's needed, what works, what doesn't, why does it matter. This helps stay on the focused goal.",
-	},
-	{
-		id: 2,
-		heading: "Research and gather information",
-		desc: "Dive into docs, utilize latest and greatest tools to solve the problem.",
-	},
-	{
-		id: 3,
-		heading: "break down and brain storm",
-		desc: "Decompose problem into smaller manageable parts,sketch multiple approaches on paper and prioritize",
-	},
-	{
-		id: 4,
-		heading: "implement, test and validate",
-		desc: "Code the solution, run unit/integration test, plus manual checks across browsers/devices.",
-	},
-];
-
-const testimonials = [
-	{
-		id: 2,
-		comment:
-			"Exceptional frontend skills that brought our UI designs to life with seamless interactivity and performance.",
-		position: "Product Manager, WebForge Inc.",
-		score: 4.5,
-		name: "Jordan Lee",
-	},
-	{
-		id: 3,
-		comment:
-			"A true problem-solver who debugged complex issues in our app, delivering a bug-free release ahead of schedule.",
-		position: "Engineering Lead, CodeCrafters LLC",
-		score: 4.6,
-		name: "Taylor Morgan",
-	},
-	{
-		id: 4,
-		comment:
-			"Their expertise in cloud integration transformed our infrastructure, making it scalable and reliable.",
-		position: "VP of Operations, CloudPeak Enterprises",
-		score: 4.2,
-		name: "Casey Nguyen",
-	},
-
-	{
-		id: 5,
-		comment:
-			"Outstanding collaboration on our machine learning project, with clean code and insightful optimizations.",
-		position: "Data Science Director, AI Dynamics",
-		score: 4.1,
-		name: "Riley Patel",
-	},
-	{
-		id: 6,
-		comment:
-			"Delivered a robust e-commerce platform that boosted our sales by 30% through efficient database management.",
-		position: "CEO, ShopNet Global",
-		score: 4.4,
-		name: "Morgan Ellis",
-	},
-];
-
 const Item = ({ data }) => {
 	const Motion = motion;
 	const [isExpand, setIsExpand] = useState(false);
@@ -342,7 +261,7 @@ const Item = ({ data }) => {
 				<img src={data.image} alt="image" className="h-full" />
 				{isExpand && (
 					<div className="absolute op-0 right-0 w-full h-full z-10 bg-zinc-900/50 flex flex-col md:flex-row justify-center items-center gap-4 lg:flex-col ">
-						<button className="bg-zinc-100 text-zinc-900 text-md w-fit  font-semibold px-4 py-3  flex gap-2 items-center whitespace-nowrap rounded-full ">
+						<button className="bg-zinc-200 text-zinc-900 text-md w-fit  font-semibold px-4 py-3  flex gap-2 items-center whitespace-nowrap rounded-full ">
 							Go to Website
 						</button>
 						<button className="border-2 border-zinc-100 text-zinc-100 text-md w-fit  font-semibold px-4 py-3  flex gap-2 items-center whitespace-nowrap rounded-full ">

@@ -31,6 +31,7 @@ export const WhatsappButton = () => {
           e.currentTarget.style.transform = "scale(1)";
       }}
       >
+          
           <FontAwesomeIcon icon={faWhatsapp} size="2x" />
       </a>
   )
