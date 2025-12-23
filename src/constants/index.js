@@ -1,6 +1,11 @@
 import restaurant from "/images/restaurant.png";
 import zentryclone from "/images/zentryclone.png";
 import chatgptclone from "/images/chatgpt.png";
+import {
+	AppWindow,
+	SquaresExclude,
+	Workflow,
+} from "lucide-react";
 
 export const testimonials = [
 	{
@@ -142,3 +147,26 @@ export const strategy = [
 	},
 ];
 
+export const services = [
+	{
+		id: 1,
+		title: "SEO Optimization",
+		content:
+			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, iure!",
+		icon: Workflow,
+	},
+	{
+		id: 2,
+		title: "Digital Marketing",
+		content:
+			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, iure!",
+		icon: SquaresExclude,
+	},
+	{
+		id: 3,
+		title: "Web Development",
+		content:
+			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, iure!",
+		icon: AppWindow,
+	},
+];

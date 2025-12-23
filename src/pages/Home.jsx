@@ -3,9 +3,9 @@ import { TextType, ContactForm, Carousel, HamburgerMenu } from "../components";
 import { HandshakeIcon, LocateIcon, Mail } from "lucide-react";
 
 import { Footer } from "../components/ui/footer";
+import Marquee from "react-fast-marquee";
 
-
-import { strategy, successStories, testimonials } from "../constants";
+import { services, strategy, successStories, testimonials } from "../constants";
 
 import { motion } from "motion/react";
 
@@ -102,6 +102,8 @@ export default function Home() {
 					</div>
 				</section>
 
+				{/* STRATEGY */}
+
 				<section className=" w-full px-4 py-10 mt-20 flex items-center max-w-5xl h-full mx-auto justify-start flex-col">
 					<div className="flex flex-col lg:flex-row gap-10 md:gap-20 border-b pb-10 w-full">
 						<p className="border border-zinc-200 px-5 py-2 mt-2 rounded-full font-semibold w-fit h-fit text-zinc-200 ">
@@ -135,6 +137,52 @@ export default function Home() {
 							<span className="text-[#0947e2] italic">Maximizing</span>{" "}
 							potentials
 						</p>
+					</div>
+				</section>
+
+				{/* WHAT I DO */}
+
+				<section
+					id="services"
+					className="relative w-full px-4 py-10 mt-20 flex items-center  max-w-5xl min-h-screen mx-auto justify-start flex-col">
+					<div className="flex flex-col lg:flex-row gap-10 md:gap-20 border-b pb-10 w-full">
+						<p className="border border-zinc-200 px-5 py-2 mt-2 rounded-full font-semibold w-fit h-fit text-zinc-200 ">
+							Services
+						</p>
+						<p className="font-extrabold text-4xl uppercase whitespace-nowrap lg:text-6xl w-full text-right text-zinc-200 ">
+							My<span className="italic text-[#0947e2]"> Experties</span> <br />
+						</p>
+					</div>
+					<div className="flex gap-4 my-10 ">
+						<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+							{services.map((c) => {
+								return (
+									<div
+										key={c.id}
+										className={`flex flex-col gap-4 justify-center items-center p-4 border border-zinc-900 bg-zinc-900`}>
+										<span className="min-h-20 min-w-20 flex justify-center items-center outline outline-zinc-700 bg-zinc-900">
+											<c.icon size={35} className="text-zinc-400" />
+										</span>
+										<div className="">
+											<h4 className="my-2 font-extrabold text-center">
+												{c.title}
+											</h4>
+											<p className="text-sm text-center">{c.content}</p>
+										</div>
+									</div>
+								);
+							})}
+						</div>
+					</div>
+					<div className="flex gap-4">
+						<h4 className="text-4xl uppercase  font-extrabold  font-dmsans">
+							Skills
+						</h4>
+						<Marquee>
+							<div className="text-lg flex gap-4">
+								ReactJs NextJs Node Tailwindcss {" "}
+							</div>
+						</Marquee>
 					</div>
 				</section>
 
@@ -184,38 +232,41 @@ export default function Home() {
 				{/* WHAT TO KNOW */}
 
 				<Motion.section
+					id="contact"
 					initial={{ backgroundColor: "black", opacity: 0 }}
 					whileInView={{ backgroundColor: "white", opacity: 0.96 }}
-					className=" w-full  px-4 py-10 flex items-center max-w-5xl h-full mx-auto justify-start flex-col bg-zinc-200  text-zinc-600 lg:rounded-3xl">
-					<div className="flex flex-col lg:flex-row gap-10 md:gap-20 border-b pb-10 w-full">
-						<p className="border px-5 py-2 mt-2 rounded-full font-semibold h-fit w-fit whitespace-nowrap text-zinc-600 ">
-							Contact me
-						</p>
-						<p className="flex md:flex-row justify-between items-start gap-4 md:gap-10 flex-col text-right w-full">
-							<span className="font-extrabold text-4xl uppercase whitespace-nowrap lg:text-6xl text-right text-zinc-600 ">
-								Want to <span className="italic text-[#0947e2]">meet?</span>
-							</span>
+					className=" w-screen  px-4 py-10 flex items-center  h-full mx-auto justify-start flex-col bg-zinc-200  text-zinc-600 ">
+					<div className="max-w-5xl mx-auto w-full flex justify-start flex-col items-center">
+						<div className="flex flex-col lg:flex-row gap-10 md:gap-20 border-b pb-10 w-full">
+							<p className="border px-5 py-2 mt-2 rounded-full font-semibold h-fit w-fit whitespace-nowrap text-zinc-600 ">
+								Contact me
+							</p>
+							<p className="flex md:flex-row justify-between items-start gap-4 md:gap-10 flex-col text-right w-full">
+								<span className="font-extrabold text-4xl uppercase whitespace-nowrap lg:text-6xl text-right text-zinc-600 ">
+									Want to <span className="italic text-[#0947e2]">meet?</span>
+								</span>
 
-							<span className="text-xs text-zinc-600 ">
-								I'm here to help you unlock market possibilities and drive
-								growth. Reach out today to discus your goals and challenges and
-								explore tailored solutions.{" "}
-							</span>
-						</p>
+								<span className="text-xs text-zinc-600 ">
+									I'm here to help you unlock market possibilities and drive
+									growth. Reach out today to discus your goals and challenges
+									and explore tailored solutions.{" "}
+								</span>
+							</p>
+						</div>
+
+						<div className="mt-10">
+							<ul>
+								<li className="flex gap-4">
+									<LocateIcon className="w-5 h-6" /> Port Harcourt, Nigeria
+								</li>
+
+								<li className="flex gap-4 ">
+									<Mail className="w-5 h-6" /> chidielueme@gmail.com
+								</li>
+							</ul>
+						</div>
+						<ContactForm />
 					</div>
-
-					<div className="mt-10">
-						<ul>
-							<li className="flex gap-4">
-								<LocateIcon className="w-5 h-6" /> Port Harcourt, Nigeria
-							</li>
-
-							<li className="flex gap-4 ">
-								<Mail className="w-5 h-6" /> chidielueme@gmail.com
-							</li>
-						</ul>
-					</div>
-					<ContactForm />
 				</Motion.section>
 				<Footer />
 			</main>
