@@ -199,48 +199,48 @@ export default function Home() {
 								<IconBrandNextjs stroke={2} className="text-transparent" />
 								<IconBrandNextjs
 									size={50}
-									stroke={1}
+									stroke={2}
 									className="text-zinc-500"
 								/>
 								<IconBrandDocker
 									size={50}
-									stroke={1}
+									stroke={2}
 									className="text-zinc-500"
 								/>
 								<IconBrandReact
 									size={50}
-									stroke={1}
+									stroke={2}
 									className="text-zinc-500"
 								/>
 								<IconBrandTypescript
 									size={50}
-									stroke={1}
+									stroke={2}
 									className="text-zinc-500"
 								/>
 								<IconFileTypeHtml
 									size={50}
-									stroke={1}
+									stroke={2}
 									className="text-zinc-500"
 								/>
 								<IconBrandTailwind
 									ssize={50}
-									stroke={1}
+									stroke={2}
 									className="text-zinc-500"
 								/>
 								<IconBrandNodejs
 									size={50}
-									stroke={1}
+									stroke={2}
 									className="text-zinc-500"
 								/>
 								<IconBrandSass size={50} stroke={1} className="text-zinc-500" />
 								<IconBrandGithub
 									size={50}
-									stroke={1}
+									stroke={2}
 									className="text-zinc-500"
 								/>
 								<IconBrandFramerMotion
 									size={50}
-									stroke={1}
+									stroke={2}
 									className="text-zinc-500"
 								/>
 							</div>
