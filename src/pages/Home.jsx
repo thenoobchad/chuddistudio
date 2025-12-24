@@ -223,7 +223,7 @@ export default function Home() {
 									className="text-zinc-500"
 								/>
 								<IconBrandTailwind
-									ssize={50}
+									size={50}
 									stroke={2}
 									className="text-zinc-500"
 								/>
@@ -232,7 +232,7 @@ export default function Home() {
 									stroke={2}
 									className="text-zinc-500"
 								/>
-								<IconBrandSass size={50} stroke={1} className="text-zinc-500" />
+								<IconBrandSass size={50} stroke={2} className="text-zinc-500" />
 								<IconBrandGithub
 									size={50}
 									stroke={2}
