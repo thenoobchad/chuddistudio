@@ -8,16 +8,16 @@ import Marquee from "react-fast-marquee";
 import { services, strategy, successStories, testimonials } from "../constants";
 
 import { motion } from "motion/react";
+import { css, html, react, node, tailwindcss } from "../../public/images/index";
 
 export default function Home() {
-
 	const Motion = motion;
 	const [isActive, setIsActive] = useState(false);
 
 	return (
 		<>
 			<main className="bg-black text-zinc-50 min-h-screen relative">
-				<MenuList isActive={isActive} />
+				<MenuList isActive={isActive} setActive={setIsActive} />
 				<div className="w-full max-w-5xl h-full mx-auto px-4 py-4 justify-center">
 					{/* Navbar */}
 					<div className="w-full flex justify-end rounded max-w-5xl mx-auto relative top-1 right-2 ">
@@ -64,7 +64,7 @@ export default function Home() {
 				</div>
 
 				{/* STATS SECTION */}
-				<section className=" w-full h-full px-4 pb-8 mt-25 flex items-center max-w-5xl  mx-auto justify-center">
+				<section id='stats' className=" w-full h-full px-4 pb-8 mt-25 flex items-center max-w-5xl  mx-auto justify-center">
 					<div className="grid grid-cols-12 grid-rows-7 h-[400px] gap-6">
 						<div className="border-l-4 border-zinc-500 px-5 py-1 col-span-6 row-span-4 flex flex-col justify-between bg-zinc-950 lg:bg-transparent lg:col-span-3">
 							<h4 className="text-4xl md:text-7xl font-extrabold text-zinc-200 ">
@@ -140,7 +140,7 @@ export default function Home() {
 					</div>
 				</section>
 
-				{/* WHAT I DO */}
+				{/* SERVICES */}
 
 				<section
 					id="services"
@@ -164,10 +164,12 @@ export default function Home() {
 											<c.icon size={35} className="text-zinc-400" />
 										</span>
 										<div className="">
-											<h4 className="my-2 font-extrabold text-center">
+											<h4 className="my-2 font-extrabold text-center text-xl">
 												{c.title}
 											</h4>
-											<p className="text-sm text-center">{c.content}</p>
+											<p className="text-sm text-justify text-zinc-400">
+												{c.content}
+											</p>
 										</div>
 									</div>
 								);
@@ -178,9 +180,17 @@ export default function Home() {
 						<h4 className="text-4xl uppercase  font-extrabold  font-dmsans">
 							Skills
 						</h4>
-						<Marquee>
-							<div className="text-lg flex gap-4">
-								ReactJs NextJs Node Tailwindcss {" "}
+						<Marquee autoFill={true}>
+							<div className="flex gap-8 overflow-hidden items-center justify-center">
+								<img src={node} alt="icon" className="w-10 h-10" />
+
+								<img src={react} alt="icon" className="w-10 h-10" />
+
+								<img src={css} alt="icon" className="w-10 h-10" />
+								<img src={html} alt="icon" className="w-10 h-10" />
+								<img src={tailwindcss} alt="icon" className="w-10 h-10" />
+
+								<img src="" alt="|" className="w-10 h-10" />
 							</div>
 						</Marquee>
 					</div>
@@ -213,7 +223,7 @@ export default function Home() {
 
 				{/* SUCCESS STORIES */}
 
-				<section className=" w-full min-h-screen px-4 py-10 flex items-center max-w-5xl h-full mx-auto justify-start flex-col">
+				<section id="projects" className=" w-full min-h-screen px-4 py-10 flex items-center max-w-5xl h-full mx-auto justify-start flex-col">
 					<div className="flex flex-col lg:flex-row gap-10 md:gap-20 border-b pb-10 w-full">
 						<p className="border px-5 py-2 mt-2 rounded-full font-semibold h-fit w-fit whitespace-nowrap">
 							Case Studies
@@ -229,12 +239,10 @@ export default function Home() {
 					</div>
 				</section>
 
-				{/* WHAT TO KNOW */}
+				{/* CONTACT */}
 
-				<Motion.section
+				<section
 					id="contact"
-					initial={{ backgroundColor: "black", opacity: 0 }}
-					whileInView={{ backgroundColor: "white", opacity: 0.96 }}
 					className=" w-screen  px-4 py-10 flex items-center  h-full mx-auto justify-start flex-col bg-zinc-200  text-zinc-600 ">
 					<div className="max-w-5xl mx-auto w-full flex justify-start flex-col items-center">
 						<div className="flex flex-col lg:flex-row gap-10 md:gap-20 border-b pb-10 w-full">
@@ -267,15 +275,17 @@ export default function Home() {
 						</div>
 						<ContactForm />
 					</div>
-				</Motion.section>
+				</section>
 				<Footer />
 			</main>
 		</>
 	);
 }
 
-const MenuList = ({ isActive }) => {
-	
+const MenuList = ({ isActive, setActive }) => {
+	const handleClick = () => {
+		setActive(false)
+	}
 	return (
 		<div
 			className={`${
@@ -285,16 +295,29 @@ const MenuList = ({ isActive }) => {
 				<p className="text-lg w-full flex justify-center font-bold">
 					[chidielueme@gmail.com]
 				</p>
-				{["stats", "projects", "contact", "skills"].map((c, i) => (
-					<p
+				{["services", "projects", "contact", "stats"].map((c, i) => (
+					<a
+						onClick={handleClick}
+						href={`#${c}`}
 						key={c + i}
 						className="text-4xl md:text-7xl uppercase font-bold px-8 md:px-20 border-b hover:cursor-pointer border-zinc-800 pb-4">
 						{c}
-					</p>
+					</a>
 				))}
-				<div>
-					<p className="px-8 md:px-20 text-3xl flex">
-						[facebook] [instagram] [discord]
+				<div className="flex flex-col">
+					<p className="px-8 mb-4">
+						Reach me on any of these channels for collaborations
+					</p>
+					<p className="px-8 md:px-20 text-xl flex flex-col gap-2">
+						<span>
+							<a href="#">[instagram]</a>
+						</span>{" "}
+						<span>
+							<a href="#">[facebook]</a>
+						</span>
+						<span>
+							<a href="#">[x.com]</a>
+						</span>
 					</p>
 				</div>
 			</div>

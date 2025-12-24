@@ -16,7 +16,7 @@ export const Carousel = ({ testimonials }) => {
 							className="flex flex-col justify-start  bg-zinc-100 text-zinc-900 p-4 items-start relative ">
 													
 							<div className="relative z-50">
-								<h4 className="text-5xl leading-6 w-full">"</h4>
+								<h4 className="text-5xl leading-9 w-full">"</h4>
 								<p className="text-sm">{c.comment}</p>
 								<div className="flex gap-4 mt-4 ">
 									<img

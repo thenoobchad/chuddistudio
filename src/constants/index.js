@@ -152,21 +152,21 @@ export const services = [
 		id: 1,
 		title: "SEO Optimization",
 		content:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, iure!",
+			"Conducting thorough keyword research, implementing on-page strategies, content optimization, and link-building tactics to boost organic search rankings, drive targeted traffic.",
 		icon: Workflow,
 	},
 	{
 		id: 2,
 		title: "Digital Marketing",
 		content:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, iure!",
+			"Crafting comprehensive strategies encompassing social media management, email campaigns, pay-per-click advertising, and data-driven insights.",
 		icon: SquaresExclude,
 	},
 	{
 		id: 3,
 		title: "Web Development",
 		content:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, iure!",
+			"Responsive and user-friendly websites using modern technologies such as React and Node.js, and custom backend development with databases to create seamless, secure, scalable digital experiences.",
 		icon: AppWindow,
 	},
 ];
