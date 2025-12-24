@@ -1,43 +1,42 @@
 import { Send } from "lucide-react";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { sendEmail } from "../lib/emailjs";
 
 export const ContactForm = () => {
 
 	const [status, setStatus] = useState(null);
-	const [name, setName] = useState("");
-	const [email, setEmail] = useState("");
-	const [message, setMessage] = useState("");
+	const  form = useRef()
 
 	
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 
-		const templateParams = {
-			guest_name: name,
-			guest_email: email,
-			guest_message: message,
-		};
-
-		const { success, message } = await sendEmail(templateParams);
+		try {
+		
+		const { success, message } = await sendEmail(form.current);
 		setStatus({ success, message });
 		if (success) {
-			setName("")
-			setEmail("")
-			setMessage("")
+			form.current.reset()
+		}	
+		} catch (error) {
+			console.error("Error in handleSubmit:", error);
+			setStatus({ success: false, message: "An unexpected error occurred." });
 		}
+		
+		
 	};
 
 	return (
 		<>
 			<form
 				
+				ref={form}
 				onSubmit={handleSubmit}
 				className="w-full mt-10 max-w-md">
 				<div className="flex flex-col gap-2 my-4">
 					<label
-						htmlFor="fullName"
+						htmlFor="name"
 						className="text-sm font-semibold text-gray-600">
 						Name
 					</label>
@@ -45,8 +44,7 @@ export const ContactForm = () => {
 						id="name"
 						type="text"
 						name="name"
-						value={name}
-						onChange={(e) => setName(e.target.value)}
+											
 						placeholder="e.g.John Doe"
 						className="hover:outline-0 outline-0 h-full text-sm bg-transparent border-b-2 border-zinc-600 py-4 px-4"
 					/>
@@ -59,13 +57,13 @@ export const ContactForm = () => {
 						Email
 					</label>
 					<input
-						value={email}
+						
 						type="email"
 						placeholder="e.g.johndoe@mail.com"
 						className="hover:outline-0 outline-0 h-full text-sm bg-transparent border-b-2 border-zinc-600 py-4 px-4"
 						name="email"
 						id="email"
-						onChange={(e) => setEmail(e.target.value)}
+					
 					/>
 				</div>
 
@@ -76,7 +74,7 @@ export const ContactForm = () => {
 						Message
 					</label>
 					<textarea
-						value={message}
+						
 						cols={1}
 						rows={3}
 						type="text"
@@ -84,7 +82,7 @@ export const ContactForm = () => {
 						className="hover:outline-0 outline-0 h-full text-sm bg-transparent border-b-2 border-zinc-600 py-4 px-4"
 						name="message"
 						id="message"
-						onChange={(e) => setMessage(e.target.value)}
+					
 					/>
 				</div>
 				<div className="w-full flex justify-center">

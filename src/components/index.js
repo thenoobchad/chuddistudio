@@ -7,4 +7,15 @@ import { TextType } from "./text"
 import { WhatsappButton } from "./whatsapp-button"
 import {HamburgerMenu} from "./hamburger-menu"
 
-export {Button, Carousel, ContactForm, ExperienceCard, SectionHeading, TextType, WhatsappButton, HamburgerMenu}
+
+export {
+	Button,
+	Carousel,
+	ContactForm,
+	ExperienceCard,
+	SectionHeading,
+	TextType,
+	WhatsappButton,
+	HamburgerMenu,
+	
+};

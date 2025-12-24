@@ -7,6 +7,35 @@ import {
 	Workflow,
 } from "lucide-react";
 
+
+import {
+	IconBrandNextjs,
+	IconBrandDocker,
+	IconBrandReact,
+	IconBrandTailwind,
+	IconBrandTypescript,
+	IconFileTypeHtml,
+	IconBrandNodejs,
+	IconBrandSass,
+	IconBrandFramerMotion,
+	IconBrandGithub,
+	IconWebhook,
+} from "@tabler/icons-react";
+
+export {
+	IconBrandNextjs,
+	IconBrandDocker,
+	IconBrandReact,
+	IconBrandTypescript,
+	IconFileTypeHtml,
+	IconBrandTailwind,
+	IconBrandNodejs,
+	IconBrandSass,
+	IconBrandFramerMotion,
+	IconBrandGithub,
+	IconWebhook,
+};
+
 export const testimonials = [
 	{
 		id: 2,
