@@ -143,8 +143,8 @@ export default function Home() {
 						</div>
 					))}
 
-					<div className="my-30 flex justify-center items-center w-full gap-8">
-						<div className="h-7 bg-zinc-50 w-10 md:w-10 md:h-10 rounded-full " />
+					<div className="my-20 flex justify-center items-center w-full gap-8">
+						<div className="min-h-7 bg-zinc-50 min-w-7  rounded-full " />
 						<p>
 							Turning <span className="italic text-[#0947e2]">Ideas</span> into
 							smart tools for{" "}
@@ -158,7 +158,7 @@ export default function Home() {
 
 				<section
 					id="services"
-					className="relative w-full px-4 py-10 mt-20 flex items-center  max-w-5xl min-h-screen mx-auto justify-start flex-col">
+					className="relative w-full px-4 py-10 mt-20 flex items-center  max-w-5xl  mx-auto justify-start flex-col">
 					<div className="flex flex-col lg:flex-row gap-10 md:gap-20 border-b pb-10 w-full">
 						<p className="border border-zinc-200 px-5 py-2 mt-2 rounded-full font-semibold w-fit h-fit text-zinc-200 ">
 							Services
