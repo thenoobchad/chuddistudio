@@ -16,7 +16,7 @@ export const WhatsappButton = () => {
               padding: "12px",
               borderRadius: "50%",
               boxShadow: "0 4px 6px rgba(0, 0, 0, 0.2)",
-              zIndex: 1000,
+              zIndex: 90,
               width: "50px",
               height: "50px",
               display: "flex",
