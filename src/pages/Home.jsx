@@ -281,7 +281,7 @@ export default function Home() {
 
 				<section
 					id="projects"
-					className=" w-full min-h-screen px-4 py-10 flex items-center max-w-5xl h-full mx-auto justify-start flex-col">
+					className=" w-full my-20 px-4 py-10 flex items-center max-w-5xl h-full mx-auto justify-start flex-col">
 					<div className="flex flex-col lg:flex-row gap-10 md:gap-20 border-b pb-10 w-full">
 						<p className="border px-5 py-2 mt-2 rounded-full font-semibold h-fit w-fit whitespace-nowrap">
 							Case Studies
@@ -290,7 +290,7 @@ export default function Home() {
 							Success <span className="italic text-[#0947e2]">stories</span>
 						</p>
 					</div>
-					<div className="w-full flex flex-col  my-20 gap-20">
+					<div className="w-full grid  grid-cols-1  md:grid-cols-2  lg:grid-cols-3  my-20 gap-5">
 						{successStories.map((c, i) => {
 							return <Item key={i} data={c} />;
 						})}
