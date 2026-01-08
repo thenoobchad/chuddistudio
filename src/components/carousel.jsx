@@ -1,20 +1,44 @@
-import useEmblaCarousel from "embla-carousel-react";
-import Autoplay from "embla-carousel-autoplay";
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import { Autoplay } from "swiper/modules";
 
 export const Carousel = ({ testimonials }) => {
-	const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay()]);
+	
 
 	return (
-		<div className="overflow-hidden w-full" ref={emblaRef}>
-			<div className="flex">
+		<div className="overflow-hidden w-full">
+			<Swiper
+				spaceBetween={6}
+				slidesPerView={1}
+				autoplay={{
+					delay: 2500,
+					disableOnInteraction: false,
+				}}
+				breakpoints={{
+					340: {
+						spaceBetween: 4,
+						slidesPerView: 1,
+					},
+					540: {
+						spaceBetween: 6,
+						slidesPerView: 2,
+					},
+
+					940: {
+						spaceBetween: 6,
+						slidesPerView: 3,
+					},
+				}}
+				pagination={{
+					clickable: true,
+				}}
+				modules={[Autoplay, Pagination]}>
 				{testimonials.map((c, i) => (
-					<div
-						key={c + i}
-						className="embla__slide p-12 flex gap-3 my-4  w-full  md:max-w-md  h-full ">
-						<div
-							className="flex flex-col justify-start  bg-zinc-100 text-zinc-900 p-4 items-start relative ">
-													
+					<SwiperSlide key={c + i} className="flex gap-3 my-10  w-full  h-full ">
+						<div className="flex flex-col justify-start  bg-zinc-100 text-zinc-900 p-4 items-start relative ">
 							<div className="relative z-50">
 								<h4 className="text-5xl leading-9 w-full">"</h4>
 								<p className="text-sm">{c.comment}</p>
@@ -31,9 +55,9 @@ export const Carousel = ({ testimonials }) => {
 								</div>
 							</div>
 						</div>
-					</div>
+					</SwiperSlide>
 				))}
-			</div>
+			</Swiper>
 		</div>
 	);
 };

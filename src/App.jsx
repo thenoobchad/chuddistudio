@@ -38,7 +38,7 @@ export default function App() {
 	})
 	return (
 		<>
-			<Loader />
+			{/* <Loader /> */}
 			<Router />
 			<WhatsappButton/>
 		</>

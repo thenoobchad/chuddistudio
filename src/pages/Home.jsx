@@ -1,3 +1,5 @@
+
+
 import { useState } from "react";
 import { TextType, ContactForm, Carousel, HamburgerMenu } from "../components";
 import { HandshakeIcon, LocateIcon, Mail } from "lucide-react";
@@ -21,6 +23,8 @@ import {
 	IconBrandGithub,
 	IconWebhook,
 } from "../constants";
+
+
 
 export default function Home() {
 
@@ -308,7 +312,7 @@ export default function Home() {
 									Want to <span className="italic text-[#0947e2]">meet?</span>
 								</span>
 
-								<span className="text-xs text-zinc-600 ">
+								<span className="text-xs text-zinc-600">
 									I'm here to help you unlock market possibilities and drive
 									growth. Reach out today to discus your goals and challenges
 									and explore tailored solutions.{" "}

@@ -56,7 +56,7 @@ export const testimonials = [
 	{
 		id: 4,
 		comment:
-			"Their expertise in cloud integration transformed our infrastructure, making it scalable and reliable.",
+			"Their expertise in cloud integration transformed our infrastructure, making it scalable and reliable. Great team",
 		position: "VP of Operations, CloudPeak Enterprises",
 
 		name: "Casey Nguyen",
